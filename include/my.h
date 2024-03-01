@@ -7,7 +7,6 @@
 
 #pragma once
     #define MY_H
-    #define  _GNU_SOURCE
     #include <stdio.h>
     #include <unistd.h>
     #include <stdint.h>
@@ -29,3 +28,29 @@
     #include <SFML/OpenGL.h>
     #include <SFML/System.h>
     #include <SFML/Window.h>
+
+
+typedef int(*draw_window_func)();
+typedef int(*press_window_func)();
+typedef int(*hover_window_func)();
+
+typedef enum corner_u {
+    UPPER_LEFT,
+    UPPER_RIGHT,
+    LOWER_LEFT,
+    LOWER_RIGHT
+} corner_t;
+
+typedef struct window_s {
+    char *name;
+    int priority;
+    struct window_t *depend_on;
+    corner_t depend_corner;
+    sfVector2f adjust;
+    sfVector2f size;
+    draw_window_func draw_f;
+    press_window_func press_f;
+    hover_window_func hover_f;
+    void *extra_information;
+    struct window_t *next;
+} window_t;
