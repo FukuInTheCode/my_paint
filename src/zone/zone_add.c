@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int zone_add(zone_t ***head, zone_t *new)
+int zone_add(zone_t **head, zone_t *new)
 {
     new->next = *head;
     *head = new;
