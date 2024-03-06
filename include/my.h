@@ -54,3 +54,5 @@ typedef struct zone_s {
     void *extra_information;
     struct zone_s *next;
 } zone_t;
+
+int zone_add(zone_t ***, zone_t *);
