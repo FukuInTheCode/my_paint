@@ -54,3 +54,5 @@ typedef struct window_s {
     void *extra_information;
     struct window_t *next;
 } window_t;
+
+sfVector2f zone_get_corner(window_t *, zone_t *);
