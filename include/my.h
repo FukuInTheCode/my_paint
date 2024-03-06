@@ -58,3 +58,4 @@ typedef struct zone_s {
 int my_strcmp(char const *, char const *);
 
 int zone_add(zone_t **, zone_t *);
+zone_t *zone_get(zone_t *, char const *);
