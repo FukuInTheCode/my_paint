@@ -54,3 +54,7 @@ typedef struct window_s {
     void *extra_information;
     struct window_t *next;
 } window_t;
+
+typedef struct window_s {
+    sfRenderWindow *window;
+} window_t;
