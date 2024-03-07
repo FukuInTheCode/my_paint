@@ -41,10 +41,10 @@ typedef enum corner_u {
     LOWER_RIGHT
 } corner_t;
 
-typedef struct window_s {
+typedef struct zone_s {
     char *name;
     int priority;
-    struct window_t *depend_on;
+    struct zone_s *depend_on;
     corner_t depend_corner;
     sfVector2f adjust;
     sfVector2f size;
@@ -52,7 +52,20 @@ typedef struct window_s {
     press_window_func press_f;
     hover_window_func hover_f;
     void *extra_information;
-    struct window_t *next;
+    struct zone_s *next;
+} zone_t;
+
+typedef struct window_s {
+    sfRenderWindow *window;
 } window_t;
 
 sfVector2f zone_get_corner(window_t *, zone_t *);
+
+int my_strcmp(char const *, char const *);
+
+int zone_add(zone_t **, zone_t *);
+zone_t *zone_get(zone_t *, char const *);
+int zone_draw(zone_t *, window_t *);
+int zone_remove(zone_t *, char const *);
+int zone_sort(zone_t **);
+int zone_reverse(zone_t **);
