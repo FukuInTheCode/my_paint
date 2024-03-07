@@ -69,3 +69,5 @@ int zone_draw(zone_t *, window_t *);
 int zone_remove(zone_t **, char const *);
 int zone_sort(zone_t **);
 int zone_reverse(zone_t **);
+
+int display_help(int, char **, char const *);
