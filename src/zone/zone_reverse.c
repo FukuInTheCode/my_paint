@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int reverse(zone_t **head)
+int zone_reverse(zone_t **head)
 {
     zone_t *prev = NULL;
     zone_t *current = *head;
@@ -20,4 +20,5 @@ int reverse(zone_t **head)
         current = next;
     }
     *head = prev;
+    return 0;
 }
