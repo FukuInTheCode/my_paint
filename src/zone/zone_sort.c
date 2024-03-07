@@ -37,4 +37,5 @@ int zone_sort(zone_t **head)
         current = *head;
         do_inside(&current, &temp, &swapped);
     } while (swapped);
+    return 0;
 }
