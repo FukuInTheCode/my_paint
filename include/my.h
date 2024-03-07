@@ -55,6 +55,10 @@ typedef struct zone_s {
     struct zone_s *next;
 } zone_t;
 
+typedef struct window_s {
+    sfRenderWindow *window;
+} window_t;
+
 int my_strcmp(char const *, char const *);
 
 int zone_add(zone_t **, zone_t *);
