@@ -59,6 +59,8 @@ typedef struct window_s {
     sfRenderWindow *window;
 } window_t;
 
+sfVector2f zone_get_corner(window_t *, zone_t *);
+
 int my_strcmp(char const *, char const *);
 
 int zone_add(zone_t **, zone_t *);
