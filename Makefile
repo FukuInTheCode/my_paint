@@ -5,7 +5,7 @@
 ## Placeholder
 ##
 
-NAME   = my_radar
+NAME   = my_paint
 
 CC	   = gcc
 
