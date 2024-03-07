@@ -13,15 +13,15 @@ sfVector2f zone_get_corner(window_t *window, zone_t *current)
     sfVector2f tmp = {0, 0};
 
     if (!current->depend_on) {
-        vec.x += (sfRenderWindow_getSize().x - current->size.x) *
+        vec.x += (sfRenderWindow_getSize(window->window).x - current->size.x) *
             (current->depend_corner == UPPER_RIGHT ||
             current->depend_corner == LOWER_RIGHT);
-        vec.y += (sfRenderWindow_getSize().y - current->size.y) *
+        vec.y += (sfRenderWindow_getSize(window->window).y - current->size.y) *
             (current->depend_corner == LOWER_RIGHT ||
             current->depend_corner == LOWER_LEFT);
         return vec;
     }
-    tmp = zone_get_corner(window, dependance, dependance->corner);
+    tmp = zone_get_corner(window, current->depend_on);
     vec.x += (tmp.x - current->size.x) *
         (current->depend_corner == UPPER_RIGHT ||
         current->depend_corner == LOWER_RIGHT);
