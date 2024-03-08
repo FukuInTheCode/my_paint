@@ -9,7 +9,7 @@
 
 int zone_remove(zone_t **head, char const *name)
 {
-    zone_t *current =  *head;
+    zone_t *current = *head;
     zone_t *prev = NULL;
 
     if (!*head)

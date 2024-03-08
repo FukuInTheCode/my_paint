@@ -9,5 +9,7 @@
 
 int main(int argc, char **argv, char **envp)
 {
-    return 84;
+    display_help(argc, argv, "src/assets/help.txt");
+    //if (my_gimp(argc, argv) == 84) return 84;
+    return 0;
 }
