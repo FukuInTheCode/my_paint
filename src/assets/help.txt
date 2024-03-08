@@ -1,60 +1,42 @@
-→ MY_PAINT -H ←
+                                → MY_PAINT -H ←
 
-* What is it ?
-    If you know gimp, so you know my_paint. It's the same principle.
-
-* How to use it ?
-    my_paint have a lot of functionality.
-
-     - The different tools :
-            - Brush :
-                - Various brush textures available for creating diverse strokes.
-            - Eraser :
-                - Ability to erase parts of the canvas.
-            - Shapes :
-                - Basic shapes such as circle, square, rectangle, etc.
-            - Selection Tool :
-                - Allows for precise selection of areas on the canvas.
-            - Pen/Pencil Tool :
-                - Drawing tool with adjustable thickness for creating freehand strokes.
-            - Fill Tool :
-                - Tool to fill closed areas with color or patterns.
-
-    Key Features:
-        - Themes:
-            - Light (white) and Dark (black) themes for user interface customization.
-        - Infinite Canvas:
-            - To draw more and more of what comes to mind.
-        - Layers:
-            - Supports up to 10 layers for organizing and editing elements separately.
-        - Shapes:
-            - Basic geometric shapes like circle, square, rectangle, etc.
-        - File Explorer:
-            - Simple file explorer for easy navigation and management of files.
-        - Shape Recognition AI:
-            - Utilizes artificial intelligence to recognize and assist in drawing shapes.
-        - Brush Textures:
-            - Offers a variety of brush textures for creating unique brush strokes.
-        - Drag Functionality:
-            - Canvas can be dragged when the cursor is at the edge, for easy navigation.
-        - Resizable and Movable Window:
-            - Application window can be resized, moved, and closed as per user preference.
-        - Tools:
-            - Provides pencil/brush and eraser tools for drawing and editing.
-        - Buttons:
-            - Features buttons with at least 3 states for different functionalities to better find your way.
-        - Menu Bar:
-            - Contains options such as "File" (new file, open file, save file), "Edit" (selection of tools), and "Help" (about, help).
-        - Side Menu (appears when selecting a tool):
-            - Includes options like "Pen" (adjust thickness), "Eraser" (change shape and size).
-        - Mouse Drawing:
-            - Allows drawing with mouse input for precise control.
-        - Image Save:
-            - Supports saving images in .jpg format or other format.
-        - File Operations:
-            - Ability to open, save, and manage files.
-        - Color Management:
-            - Side menu for color management and selection.
-        - Additional Features:
-            - Zoom functionality, selection tools, cut-copy-paste, layer mask management, image import, brush customization, complex shapes, transformations (rotation, etc.), undo and redo functionalities.
-            
+╭─────────────────────────────── MY_PAINT -HELP ───────────────────────────────╮
+│                                                                              │
+│ * What is it?                                                                │
+│   MY_PAINT is a versatile graphics editing software, akin to GIMP, designed  │
+│   to empower artists and designers in their digital creations.               │
+│                                                                              │
+│                                                                              │
+│ * How to use it?                                                             │
+│   MY_PAINT offers an extensive array of tools and features to facilitate     │
+│   your artistic endeavors:                                                   │
+│   - Various brush textures                                                   │
+│   - Eraser functionality                                                     │
+│   - Basic shapes                                                             │
+│   - Precise selection tools                                                  │
+│   - Adjustable pen/pencil tool                                               │
+│   - Fill tool                                                                │
+│   ...and more.                                                               │
+│                                                                              │
+│                                                                              │
+│ * Key Features:                                                              │
+│   - Themes: Light (white) and Dark (black) themes for UI customization       │
+│   - Infinite Canvas: Supports canvas sizes up to 10,000 x 10,000 pixels      │
+│   - Layers: Supports up to 10 layers for organizing and editing elements     │
+│   - File Explorer: Simple file navigation and management                     │
+│   - Shape Recognition AI: Assists in drawing shapes                          │
+│   - Drag Functionality: Easy canvas navigation                               │
+│   - Resizable Window: Customize window size                                  │
+│   - Tools: Various drawing and editing tools                                 │
+│   - Buttons: Multi-state buttons for different functionalities               │
+│   - Menu Bar: File, Edit, Help options                                       │
+│   - Side Menu: Tool-specific options                                         │
+│   - Mouse Drawing: Precise control with mouse input                          │
+│   - Image Save: Save images in .jpg format                                   │
+│   - File Operations: Open, save, and manage files                            │
+│   - Color Management: Easily manage and select colors                        │
+│   - Additional Features: Zoom, cut-copy-paste, layer mask management,        │
+│     image import, brush customization, transformations, undo and redo.       │
+│                                                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
