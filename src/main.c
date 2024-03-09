@@ -7,9 +7,19 @@
 
 #include "my.h"
 
+static int is_env_good(char **envp)
+{
+    for (int i = 0; envp[i]; i++) {
+        if (my_strncmp("DISPLAY", envp[i], 6) == 0)
+            return 0;
+    }
+    return 84;
+}
+
 int main(int argc, char **argv, char **envp)
 {
-    display_help(argc, argv, "src/assets/help.txt");
-    //if (my_gimp(argc, argv) == 84) return 84;
+    if (is_env_good(envp) == 84)
+        return 84;
+    //my_gimp
     return 0;
 }
