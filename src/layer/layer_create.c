@@ -13,6 +13,7 @@ layer_t *layer_create(void)
 
     layer->is_shower = true;
     layer->layer = sfRenderTexture_create(10000, 10000, sfFalse);
+    sfRenderTexture_setSmooth(layer->layer, sfTrue);
     layer->sprite = sfSprite_create();
     layer->next = NULL;
     return layer;
