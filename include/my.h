@@ -93,5 +93,5 @@ int canva_add_layer(canva_t *, layer_t *);
 int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
-int canvazone_draw(zone_t *, window_t *)
+int canvazone_draw(zone_t *, window_t *);
 
