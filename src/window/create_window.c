@@ -7,7 +7,6 @@
 
 #include "my.h"
 
-
 int create_window(window_t *window, sfEvent *event)
 {
     sfRenderWindow_setFramerateLimit(window->window, 60);

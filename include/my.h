@@ -81,3 +81,16 @@ zone_t *zone_create(void);
 int zone_destroy(zone_t *);
 
 int gestion_event(window_t *, sfEvent *);
+
+typedef int(*event_f)();
+
+typedef struct event_s {
+    sfEventType type;
+    event_f f;
+} event_t;
+
+static event_t const events[] = {
+    {sfLKeyPressed, event_keypressed},
+    {sfEvtClosed, event_close},
+    {0, NULL}
+}
