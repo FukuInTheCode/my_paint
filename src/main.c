@@ -20,6 +20,8 @@ int main(int argc, char **argv, char **envp)
 {
     if (is_env_good(envp) == 84)
         return 84;
+    if (display_help(argc, argv, "src/assets/help.txt") == 84)
+        return 84;
     if (argc != 1)
         return 84;
     if (my_gimp() == 84)
