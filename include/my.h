@@ -82,6 +82,7 @@ int zone_destroy(zone_t *);
 
 int gestion_event(window_t *, sfEvent *);
 int event_close(window_t *, sfEvent *);
+int event_keypressed(window_t *, sfEvent *);
 
 typedef int(*event_f)();
 
@@ -91,7 +92,7 @@ typedef struct event_s {
 } event_t;
 
 static event_t const events[] = {
-    {sfLKeyPressed, event_keypressed},
+    {sfKeyPressed, event_keypressed},
     {sfEvtClosed, event_close},
     {0, NULL}
 }
