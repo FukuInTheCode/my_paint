@@ -80,4 +80,4 @@ int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
 
-int gestion_event(sfRenderWindow *, sfEvent *);
+int gestion_event(window_t *, sfEvent *);
