@@ -64,6 +64,8 @@ sfVector2f zone_get_corner(window_t *, zone_t *);
 int my_strcmp(char const *, char const *);
 int my_strncmp(char const *, char const *, int);
 
+int my_gimp(void);
+
 int zone_add(zone_t **, zone_t *);
 zone_t *zone_get(zone_t *, char const *);
 int zone_draw(zone_t *, window_t *);
