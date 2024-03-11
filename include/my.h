@@ -65,6 +65,10 @@ int my_strcmp(char const *, char const *);
 int my_strncmp(char const *, char const *, int);
 
 int my_gimp(void);
+int gestion_window(window_t *);
+int init_struct_window(window_t *);
+
+int megatron_free(window_t *);
 
 int zone_add(zone_t **, zone_t *);
 zone_t *zone_get(zone_t *, char const *);
