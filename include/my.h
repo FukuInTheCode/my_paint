@@ -55,6 +55,18 @@ typedef struct zone_s {
     struct zone_s *next;
 } zone_t;
 
+typedef struct layer_s {
+    bool is_showed;
+    sfRenderTexture *layer;
+    sfSprite *sprite;
+    struct layer_s *next;
+} layer_t;
+
+typedef struct canva_s {
+    layer_t *main;
+    layer_t *layers;
+} canva_t;
+
 typedef struct window_s {
     sfRenderWindow *window;
 } window_t;
