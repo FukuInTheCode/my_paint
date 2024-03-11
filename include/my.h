@@ -82,3 +82,4 @@ int zone_destroy(zone_t *);
 
 layer_t *layer_create(void);
 int layer_add(layer_t **, layer_t *);
+int layer_destroy(layer_t *);
