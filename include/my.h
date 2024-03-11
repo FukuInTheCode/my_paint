@@ -53,6 +53,7 @@ typedef struct zone_s {
     hover_window_func hover_f;
     void *extra_information;
     struct zone_s *next;
+    struct zone_s *prev;
 } zone_t;
 
 typedef struct window_s {
@@ -79,3 +80,4 @@ int zone_reverse(zone_t **);
 int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
+zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
