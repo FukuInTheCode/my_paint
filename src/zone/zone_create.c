@@ -23,5 +23,7 @@ zone_t *zone_create(void)
     ret->hover_f = NULL;
     ret->extra_information = NULL;
     ret->next = NULL;
+    ret->prev = NULL;
+    ret->depend_corner = UPPER_LEFT;
     return ret;
 }
