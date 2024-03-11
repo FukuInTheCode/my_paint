@@ -75,6 +75,7 @@ sfVector2f zone_get_corner(window_t *, zone_t *);
 
 int my_strcmp(char const *, char const *);
 int my_strncmp(char const *, char const *, int);
+char *my_strdup(char const *);
 
 int zone_add(zone_t **, zone_t *);
 zone_t *zone_get(zone_t *, char const *);
@@ -90,3 +91,7 @@ canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
 int canva_draw(canva_t *, sfRenderWindow *);
+
+zone_t *canvazone_create(void);
+int canvazone_draw(zone_t *, window_t *)
+
