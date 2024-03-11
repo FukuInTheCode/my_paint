@@ -9,8 +9,9 @@
 
 int init_struct_window(window_t *window)
 {
-    window->window = sfRenderWindow_create((sfVideoMode){1920, 1080, 32}, "My Gimp :)", sfFullscreen, NULL);
-    if(!window->window)
+    window->window = sfRenderWindow_create((sfVideoMode){1920, 1080, 32},
+        "My Gimp :)", sfFullscreen, NULL);
+    if (!window->window)
         return 84;
     return 0;
 }
