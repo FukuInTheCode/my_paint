@@ -92,7 +92,7 @@ typedef struct event_s {
 } event_t;
 
 static event_t const events[] = {
-    {sfKeyPressed, event_keypressed},
+    {sfEvtKeyPressed, event_keypressed},
     {sfEvtClosed, event_close},
     {0, NULL}
-}
+};
