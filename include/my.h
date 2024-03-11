@@ -89,3 +89,4 @@ int zone_destroy(zone_t *);
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
+int canva_draw(canva_t *, sfRenderWindow *);
