@@ -9,6 +9,7 @@
 
 int zone_add(zone_t **head, zone_t *new)
 {
+    (*head)->prev = new;
     new->next = *head;
     *head = new;
     return 0;
