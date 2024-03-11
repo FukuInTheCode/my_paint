@@ -20,6 +20,9 @@ int main(int argc, char **argv, char **envp)
 {
     if (is_env_good(envp) == 84)
         return 84;
-    //my_gimp
+    if (argc != 1)
+        return 84;
+    if (my_gimp() == 84)
+        return 84;
     return 0;
 }
