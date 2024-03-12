@@ -53,6 +53,7 @@ typedef struct zone_s {
     hover_window_func hover_f;
     void *extra_information;
     struct zone_s *next;
+    struct zone_s *prev;
 } zone_t;
 
 typedef struct layer_s {
