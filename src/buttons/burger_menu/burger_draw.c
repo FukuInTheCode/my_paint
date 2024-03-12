@@ -9,5 +9,6 @@
 
 int burger_draw(burger_t *burger, window_t *window)
 {
+    sfRenderWindow_drawRectangleShape(window->window, burger->rect, NULL);
     return 0;
 }

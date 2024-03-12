@@ -135,3 +135,6 @@ typedef struct burger_s {
 
 burger_t *burger_create(void);
 int burger_destroy(burger_t *);
+int burger_draw(burger_t *, window_t *);
+zone_t *burgerzone_create(void);
+int burgerzone_draw(zone_t *, window_t *);
