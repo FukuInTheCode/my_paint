@@ -10,6 +10,7 @@
 int burger_destroy(burger_t *burger)
 {
     zone_destroy(burger->salad);
+    sfRectangleShape_destroy(burger->rect);
     free(burger);
     return 0;
 }

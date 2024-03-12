@@ -129,6 +129,7 @@ int canvazone_draw(zone_t *, window_t *);
 
 typedef struct burger_s {
     bool is_clicked;
+    sfRectangleShape *rect;
     zone_t *salad;
 } burger_t;
 
