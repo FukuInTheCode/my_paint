@@ -94,6 +94,11 @@ int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
 
+
+layer_t *layer_create(void);
+int layer_add(layer_t **, layer_t *);
+int layer_destroy(layer_t *);
+
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
@@ -101,4 +106,5 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
+
 
