@@ -55,6 +55,18 @@ typedef struct zone_s {
     struct zone_s *next;
 } zone_t;
 
+typedef struct layer_s {
+    bool is_showed;
+    sfRenderTexture *layer;
+    sfSprite *sprite;
+    struct layer_s *next;
+} layer_t;
+
+typedef struct canva_s {
+    layer_t *main;
+    layer_t *layers;
+} canva_t;
+
 typedef struct window_s {
     sfRenderWindow *window;
 } window_t;
@@ -63,6 +75,8 @@ sfVector2f zone_get_corner(window_t *, zone_t *);
 
 int my_strcmp(char const *, char const *);
 int my_strncmp(char const *, char const *, int);
+char *my_strdup(char const *);
+size_t my_strlen(char const *);
 
 int my_gimp(void);
 int gestion_window(window_t *);
@@ -79,4 +93,36 @@ int zone_reverse(zone_t **);
 int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
+
 zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
+
+int gestion_event(window_t *, sfEvent *);
+int event_close(window_t *, sfEvent *);
+int event_keypressed(window_t *, sfEvent *);
+
+typedef int(*event_f)();
+
+typedef struct event_s {
+    sfEventType type;
+    event_f f;
+} event_t;
+
+static event_t const events[] = {
+    {sfEvtKeyPressed, event_keypressed},
+    {sfEvtClosed, event_close},
+    {0, NULL}
+};
+
+
+layer_t *layer_create(void);
+int layer_add(layer_t **, layer_t *);
+int layer_destroy(layer_t *);
+
+canva_t *canva_create(void);
+int canva_destroy(canva_t *);
+int canva_add_layer(canva_t *, layer_t *);
+int canva_draw(canva_t *, sfRenderWindow *);
+
+zone_t *canvazone_create(void);
+int canvazone_draw(zone_t *, window_t *);
+
