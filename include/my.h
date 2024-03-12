@@ -94,6 +94,7 @@ int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
 
+zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
 
 int gestion_event(window_t *, sfEvent *);
 int event_close(window_t *, sfEvent *);
@@ -124,3 +125,4 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
+
