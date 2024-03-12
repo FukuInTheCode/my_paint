@@ -13,5 +13,4 @@ int canva_add_layer(canva_t *canva, layer_t *layer)
         canva->main = layer;
     layer_add(&canva->layers, layer);
     return 0;
-
 }
