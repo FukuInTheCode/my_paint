@@ -13,5 +13,7 @@ int init_struct_window(window_t *window)
         "My Gimp :)", sfFullscreen, NULL);
     if (!window->window)
         return 84;
+    window->head = canvazone_create();
+    canva_add_layer(window->head->extra_information, layer_create());
     return 0;
 }
