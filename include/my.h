@@ -127,4 +127,3 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
-
