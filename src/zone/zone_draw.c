@@ -9,7 +9,8 @@
 
 int zone_draw(zone_t *head, window_t *window)
 {
-    for (; head; head = head->next)
+    for (; head; head = head->next) {
         head->draw_f(head, window);
+    }
     return 0;
 }

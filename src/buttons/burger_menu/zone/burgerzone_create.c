@@ -18,5 +18,11 @@ zone_t *burgerzone_create(void)
     zone->depend_on = NULL;
     zone->priority = 1;
     zone->draw_f = burgerzone_draw;
+    zone->press_f = burgerzone_press;
+    burger->file = file_create(zone);
+    burger->edit = edit_create(burger->file);
+    burger->help = help_create(burger->edit);
+    zone->size.x = 100;
+    zone->size.y = 100;
     return zone;
 }

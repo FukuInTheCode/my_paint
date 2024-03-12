@@ -10,7 +10,7 @@
 zone_t *zone_get(zone_t *head, char const *name)
 {
     for (; head; head = head->next)
-        if (my_strcmp(name, head->name))
+        if (!my_strcmp(name, head->name))
             return head;
     return head;
 }

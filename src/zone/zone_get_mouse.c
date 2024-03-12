@@ -13,7 +13,8 @@ zone_t *zone_get_mouse(zone_t *head, window_t *window,
     sfVector2f corner_tmp = {0, 0};
     sfFloatRect rect_tmp = {0, 0, 0, 0};
 
-    for (; head; head = head->next) {
+    for (; head->next; head = head->next);
+    for (; head; head = head->prev) {
         corner_tmp = zone_get_corner(window, head);
         rect_tmp.top = corner_tmp.y;
         rect_tmp.left = corner_tmp.x;

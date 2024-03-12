@@ -29,6 +29,7 @@
     #include <SFML/System.h>
     #include <SFML/Window.h>
 
+    #define FONT "./src/assets/font.otf"
 
 typedef int(*draw_window_func)();
 typedef int(*press_window_func)();
@@ -134,11 +135,26 @@ int canvazone_draw(zone_t *, window_t *);
 typedef struct burger_s {
     bool is_clicked;
     sfRectangleShape *rect;
-    zone_t *salad;
+    zone_t *file;
+    zone_t *edit;
+    zone_t *help;
 } burger_t;
 
 burger_t *burger_create(void);
 int burger_destroy(burger_t *);
+int burger_press(burger_t *, window_t *);
 int burger_draw(burger_t *, window_t *);
 zone_t *burgerzone_create(void);
 int burgerzone_draw(zone_t *, window_t *);
+int burgerzone_press(zone_t *, window_t *);
+
+typedef struct salad_s {
+    sfRectangleShape *rect;
+    sfText *text;
+} salad_t;
+
+salad_t *salad_create(char const *);
+zone_t *file_create(zone_t *);
+zone_t *edit_create(zone_t *);
+zone_t *help_create(zone_t *);
+int salad_draw(zone_t *, window_t *);

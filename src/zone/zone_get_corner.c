@@ -22,10 +22,10 @@ sfVector2f zone_get_corner(window_t *window, zone_t *current)
         return vec;
     }
     tmp = zone_get_corner(window, current->depend_on);
-    vec.x += (tmp.x - current->size.x) *
+    vec.x += (tmp.x - current->depend_on->size.x) *
         (current->depend_corner == UPPER_RIGHT ||
         current->depend_corner == LOWER_RIGHT);
-    vec.y += (tmp.y - current->size.y) *
+    vec.y += (tmp.y - current->depend_on->size.y) *
         (current->depend_corner == LOWER_RIGHT ||
         current->depend_corner == LOWER_LEFT);
     return vec;
