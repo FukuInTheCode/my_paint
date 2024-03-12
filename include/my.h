@@ -95,6 +95,24 @@ zone_t *zone_create(void);
 int zone_destroy(zone_t *);
 
 
+int gestion_event(window_t *, sfEvent *);
+int event_close(window_t *, sfEvent *);
+int event_keypressed(window_t *, sfEvent *);
+
+typedef int(*event_f)();
+
+typedef struct event_s {
+    sfEventType type;
+    event_f f;
+} event_t;
+
+static event_t const events[] = {
+    {sfEvtKeyPressed, event_keypressed},
+    {sfEvtClosed, event_close},
+    {0, NULL}
+};
+
+
 layer_t *layer_create(void);
 int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
@@ -106,5 +124,3 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
-
-
