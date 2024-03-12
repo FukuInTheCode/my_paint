@@ -14,7 +14,7 @@ int event_mousepressed(window_t *window, sfEvent *event)
 
     if (!clicked)
         return 0;
-    if (!clicked->press_f)
+    if (clicked->press_f)
         clicked->press_f(clicked, window);
     return 0;
 }
