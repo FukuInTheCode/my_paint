@@ -144,8 +144,10 @@ burger_t *burger_create(void);
 int burger_destroy(burger_t *);
 int burger_press(burger_t *, window_t *);
 int burger_draw(burger_t *, window_t *);
+int burger_hover(burger_t *, window_t *);
 zone_t *burgerzone_create(void);
 int burgerzone_draw(zone_t *, window_t *);
+int burgerzone_hover(zone_t *, window_t *);
 int burgerzone_press(zone_t *, window_t *);
 
 typedef struct salad_s {
