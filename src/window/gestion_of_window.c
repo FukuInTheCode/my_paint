@@ -10,6 +10,7 @@
 int gestion_window(window_t *window)
 {
     sfRenderWindow_clear(window->window, sfBlack);
+    zone_draw(window->head, window);
     sfRenderWindow_display(window->window);
     return 0;
 }

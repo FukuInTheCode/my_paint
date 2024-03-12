@@ -70,6 +70,7 @@ typedef struct canva_s {
 
 typedef struct window_s {
     sfRenderWindow *window;
+    zone_t *head;
 } window_t;
 
 sfVector2f zone_get_corner(window_t *, zone_t *);
@@ -94,12 +95,14 @@ int zone_reverse(zone_t **);
 int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
+int zone_set_size(zone_t *, window_t *, sfVector2f);
 
 zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
 
 int gestion_event(window_t *, sfEvent *);
 int event_close(window_t *, sfEvent *);
 int event_keypressed(window_t *, sfEvent *);
+int event_mousepressed(window_t *, sfEvent *);
 
 typedef int(*event_f)();
 
@@ -110,6 +113,7 @@ typedef struct event_s {
 
 static event_t const events[] = {
     {sfEvtKeyPressed, event_keypressed},
+    {sfEvtMouseButtonPressed, event_mousepressed},
     {sfEvtClosed, event_close},
     {0, NULL}
 };

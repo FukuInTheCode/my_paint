@@ -6,6 +6,7 @@
 */
 
 #include "my.h"
+#include <SFML/Graphics/Sprite.h>
 
 layer_t *layer_create(void)
 {
@@ -14,7 +15,11 @@ layer_t *layer_create(void)
     layer->is_showed = true;
     layer->layer = sfRenderTexture_create(10000, 10000, sfFalse);
     sfRenderTexture_setSmooth(layer->layer, sfTrue);
+    sfRenderTexture_clear(layer->layer, sfWhite);
+    sfRenderTexture_display(layer->layer);
     layer->sprite = sfSprite_create();
+    sfSprite_setTexture(layer->sprite,
+        sfRenderTexture_getTexture(layer->layer), sfTrue);
     layer->next = NULL;
     return layer;
 }

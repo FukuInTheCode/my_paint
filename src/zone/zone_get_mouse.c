@@ -22,5 +22,5 @@ zone_t *zone_get_mouse(zone_t *head, window_t *window,
         if (sfFloatRect_contains(&rect_tmp, mouse.x, mouse.y))
             return head;
     }
-    return  NULL;
+    return NULL;
 }
