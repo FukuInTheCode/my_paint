@@ -16,6 +16,7 @@ zone_t *burgerzone_create(void)
     zone->name = my_strdup("burger");
     zone->depend_corner = UPPER_LEFT;
     zone->depend_on = NULL;
+    zone->priority = 1;
     zone->draw_f = burgerzone_draw;
     return zone;
 }
