@@ -127,3 +127,10 @@ int canva_draw(canva_t *, sfRenderWindow *);
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
 
+typedef struct burger_s {
+    bool is_clicked;
+    zone_t *salad;
+} burger_t;
+
+burger_t *burger_create(void);
+int burger_destroy(burger_t *);
