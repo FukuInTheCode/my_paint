@@ -95,6 +95,7 @@ int zone_reverse(zone_t **);
 int display_help(int, char **, char const *);
 zone_t *zone_create(void);
 int zone_destroy(zone_t *);
+int zone_set_size(zone_t *, window_t *, sfVector2f);
 
 zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
 
