@@ -70,6 +70,7 @@ typedef struct canva_s {
 
 typedef struct window_s {
     sfRenderWindow *window;
+    zone_t *head;
 } window_t;
 
 sfVector2f zone_get_corner(window_t *, zone_t *);
