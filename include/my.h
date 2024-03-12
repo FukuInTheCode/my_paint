@@ -100,6 +100,7 @@ zone_t *zone_get_mouse(zone_t *, window_t *, sfVector2f);
 int gestion_event(window_t *, sfEvent *);
 int event_close(window_t *, sfEvent *);
 int event_keypressed(window_t *, sfEvent *);
+int event_mousepressed(window_t *, sfEvent *);
 
 typedef int(*event_f)();
 
@@ -110,6 +111,7 @@ typedef struct event_s {
 
 static event_t const events[] = {
     {sfEvtKeyPressed, event_keypressed},
+    {sfEvtMouseButtonPressed, event_mousepressed},
     {sfEvtClosed, event_close},
     {0, NULL}
 };
