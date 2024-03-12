@@ -18,7 +18,8 @@ layer_t *layer_create(void)
     sfRenderTexture_clear(layer->layer, sfWhite);
     sfRenderTexture_display(layer->layer);
     layer->sprite = sfSprite_create();
-    sfSprite_setTexture(layer->sprite, sfRenderTexture_getTexture(layer->layer), sfTrue);
+    sfSprite_setTexture(layer->sprite,
+        sfRenderTexture_getTexture(layer->layer), sfTrue);
     layer->next = NULL;
     return layer;
 }
