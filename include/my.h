@@ -195,3 +195,14 @@ int pencil_draw(pencil_t *, window_t *);
 zone_t *pencilzone_create(window_t *);
 int pencilzone_draw(zone_t *, window_t *);
 
+typedef struct eraser_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} eraser_t;
+
+eraser_t *eraser_create(void);
+int eraser_destroy(eraser_t *);
+int eraser_draw(eraser_t *, window_t *);
+zone_t *eraserzone_create(window_t *);
+int eraserzone_draw(zone_t *, window_t *);
