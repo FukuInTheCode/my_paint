@@ -13,7 +13,7 @@ zone_t *pencilzone_create(window_t *window)
     pencil_t *pencil = pencil_create();
 
     zone->extra_information = (void *)pencil;
-    zone->name = my_strdup("pencil");
+    zone->name = my_strdup("button_pencil");
     zone->depend_corner = UPPER_RIGHT;
     zone->depend_on = zone_get(window->head, "burger");
     zone->priority = 1;
