@@ -20,7 +20,7 @@ pencil_t *pencil_create(void)
     sfRectangleShape_setOutlineThickness(pencil->rect, 2);
     sfTexture *texture = sfTexture_createFromFile("src/assets/pencil.png", NULL);
     sfSprite_setTexture(pencil->sprite, texture, sfTrue);
-    sfVector2f scale = {0.1f, 0.1f}; // Scale factors for width and height (0.5f reduces the size by half)
+    sfVector2f scale = {0.1f, 0.1f};
     sfSprite_setScale(pencil->sprite, scale);
     return pencil;
 }
