@@ -13,5 +13,6 @@ canva_t *canva_create(void)
 
     canva->main = NULL;
     canva->layers = NULL;
+    canva->use_f = NULL;
     return canva;
 }

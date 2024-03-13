@@ -67,6 +67,7 @@ typedef struct layer_s {
 typedef struct canva_s {
     layer_t *main;
     layer_t *layers;
+    draw_window_func use_f;
 } canva_t;
 
 typedef struct window_s {
@@ -123,6 +124,7 @@ static event_t const events[] = {
 layer_t *layer_create(void);
 int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
+int layer_use(layer_t *, window_t *, sfVector2f, canva_t *);
 
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
@@ -131,6 +133,7 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
+int canvazone_hover(zone_t *, window_t *);
 
 typedef struct burger_s {
     bool is_clicked;
