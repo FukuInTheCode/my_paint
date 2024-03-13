@@ -160,3 +160,15 @@ zone_t *file_create(zone_t *);
 zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
 int salad_draw(zone_t *, window_t *);
+
+typedef struct pencil_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} pencil_t;
+
+pencil_t *pencil_create(void);
+int pencil_destroy(pencil_t *);
+int pencil_draw(pencil_t *, window_t *);
+zone_t *pencilzone_create(window_t *);
+int pencilzone_draw(zone_t *, window_t *);
