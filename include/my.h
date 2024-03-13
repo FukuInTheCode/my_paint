@@ -206,3 +206,13 @@ int eraser_destroy(eraser_t *);
 int eraser_draw(eraser_t *, window_t *);
 zone_t *eraserzone_create(window_t *);
 int eraserzone_draw(zone_t *, window_t *);
+
+typedef struct delimitator_s {
+    sfRectangleShape *rect;
+} delimitator_t;
+
+delimitator_t *delimitator_create(void);
+int delimitator_destroy(delimitator_t *);
+int delimitator_draw(delimitator_t *, window_t *);
+zone_t *delimitatorzone_create(void);
+int delimitatorzone_draw(zone_t *, window_t *);
