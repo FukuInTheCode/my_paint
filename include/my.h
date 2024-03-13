@@ -211,7 +211,7 @@ typedef struct delimitator_s {
     sfRectangleShape *rect;
 } delimitator_t;
 
-delimitator_t *delimitator_create();
+delimitator_t *delimitator_create(void);
 int delimitator_destroy(delimitator_t *);
 int delimitator_draw(delimitator_t *, window_t *);
 zone_t *delimitatorzone_create(void);
