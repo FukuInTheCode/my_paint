@@ -68,6 +68,8 @@ typedef struct canva_s {
     layer_t *main;
     layer_t *layers;
     draw_window_func use_f;
+    sfColor color;
+    int radius;
 } canva_t;
 
 typedef struct window_s {
@@ -125,6 +127,7 @@ layer_t *layer_create(void);
 int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
 int layer_use(layer_t *, window_t *, sfVector2f, canva_t *);
+int layer_draw_trail(layer_t *, sfVector2f, window_t *, canva_t *);
 
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);

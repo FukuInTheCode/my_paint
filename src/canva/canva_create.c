@@ -13,6 +13,8 @@ canva_t *canva_create(void)
 
     canva->main = NULL;
     canva->layers = NULL;
-    canva->use_f = NULL;
+    canva->use_f = layer_draw_trail;
+    canva->radius = 1;
+    canva->color = sfBlack;
     return canva;
 }

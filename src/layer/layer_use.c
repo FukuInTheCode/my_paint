@@ -10,8 +10,7 @@
 int layer_use(layer_t *layer, window_t *window,
     sfVector2f mouse, canva_t *canva)
 {
-    printf("dsbu\n");
     if (canva->use_f)
-        return canva->use_f(layer, mouse, window);
+        return canva->use_f(layer, mouse, window, canva);
     return 0;
 }
