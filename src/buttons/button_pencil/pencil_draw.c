@@ -10,7 +10,7 @@
 int pencil_draw(pencil_t *pencil, window_t *window)
 {
     sfVector2f corner_position =
-        zone_get_corner(window, zone_get(window->head, "pencil"));
+        zone_get_corner(window, zone_get(window->head, "button_pencil"));
 
     corner_position.x += 20;
     corner_position.y += 30;
