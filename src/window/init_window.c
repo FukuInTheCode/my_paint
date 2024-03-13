@@ -19,5 +19,6 @@ int init_struct_window(window_t *window)
     canva_add_layer(window->head->extra_information, layer_create());
     zone_add(&window->head, burgerzone_create());
     zone_add(&window->head, pencilzone_create(window));
+    zone_add(&window->head, eraserzone_create(window));
     return 0;
 }
