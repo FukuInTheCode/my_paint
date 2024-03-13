@@ -9,5 +9,5 @@
 
 int shapeszone_draw(zone_t *shapeszone, window_t *window)
 {
-    return eraser_draw(shapezone->extra_information, window);
+    return shapes_draw(shapeszone->extra_information, window);
 }
