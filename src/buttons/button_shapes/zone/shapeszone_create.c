@@ -10,7 +10,7 @@
 zone_t *shapeszone_create(window_t *window)
 {
     zone_t *zone = zone_create();
-    shape_t *shape = pencil_create();
+    shape_t *shape = shapes_create();
 
     zone->extra_information = (void *)shape;
     zone->name = my_strdup("button_shapes");
