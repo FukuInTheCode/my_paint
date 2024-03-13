@@ -138,6 +138,13 @@ typedef struct burger_s {
     zone_t *file;
     zone_t *edit;
     zone_t *help;
+    zone_t *open;
+    zone_t *save;
+    zone_t *quit;
+    zone_t *pencil;
+    zone_t *eraser;
+    zone_t *about;
+    zone_t *subhelp;
 } burger_t;
 
 burger_t *burger_create(void);
@@ -159,4 +166,14 @@ salad_t *salad_create(char const *);
 zone_t *file_create(zone_t *);
 zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
+zone_t *open_create(zone_t *);
+zone_t *save_create(zone_t *);
+zone_t *quit_create(zone_t *);
+zone_t *about_create(zone_t *);
+zone_t *subhelp_create(zone_t *);
+zone_t *pencil_create_salad(zone_t *);
+zone_t *eraser_create_salad(zone_t *);
+int file_press(zone_t *, window_t *);
+int edit_press(zone_t *, window_t *);
+int help_press(zone_t *, window_t *);
 int salad_draw(zone_t *, window_t *);

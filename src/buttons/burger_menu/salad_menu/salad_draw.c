@@ -10,9 +10,7 @@
 int salad_draw(zone_t *zone, window_t *window)
 {
     salad_t *salad = zone->extra_information;
-    sfVector2f vec = zone_get_corner(window, zone);
 
-    printf("%f, %f\n", vec.x, vec.y);
     sfRectangleShape_setPosition(salad->rect, zone_get_corner(window, zone));
     sfText_setPosition(salad->text, zone_get_corner(window, zone));
     sfRenderWindow_drawRectangleShape(window->window, salad->rect, NULL);

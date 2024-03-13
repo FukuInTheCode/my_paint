@@ -19,5 +19,6 @@ zone_t *help_create(zone_t *edit)
     file->depend_on = edit;
     file->name = my_strdup("help");
     file->draw_f = salad_draw;
+    file->press_f = help_press;
     return file;
 }
