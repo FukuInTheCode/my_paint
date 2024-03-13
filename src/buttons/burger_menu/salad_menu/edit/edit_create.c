@@ -19,5 +19,6 @@ zone_t *edit_create(zone_t *burgerzone)
     file->depend_on = burgerzone;
     file->name = my_strdup("edit");
     file->draw_f = salad_draw;
+    file->press_f = edit_press;
     return file;
 }

@@ -7,6 +7,18 @@
 
 #include "my.h"
 
+static int create_other(burger_t *burger)
+{
+    burger->open = open_create(burger->file);
+    burger->save = save_create(burger->open);
+    burger->quit = quit_create(burger->save);
+    burger->pencil = pencil_create_salad(burger->edit);
+    burger->eraser = eraser_create_salad(burger->pencil);
+    burger->subhelp = subhelp_create(burger->help);
+    burger->about = about_create(burger->subhelp);
+    return 0;
+}
+
 zone_t *burgerzone_create(void)
 {
     zone_t *zone = zone_create();
@@ -23,6 +35,7 @@ zone_t *burgerzone_create(void)
     burger->file = file_create(zone);
     burger->edit = edit_create(burger->file);
     burger->help = help_create(burger->edit);
+    create_other(burger);
     zone->size.x = 100;
     zone->size.y = 100;
     return zone;

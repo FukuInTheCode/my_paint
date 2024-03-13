@@ -7,18 +7,18 @@
 
 #include "my.h"
 
-zone_t *file_create(zone_t *burgerzone)
+zone_t *about_create(zone_t *depend)
 {
     zone_t *file = zone_create();
 
-    file->priority = 2;
+    file->priority = 3;
     file->size.x = 100;
     file->size.y = 50;
-    file->extra_information = salad_create("file");
+    file->extra_information = salad_create("about");
     file->depend_corner = LOWER_LEFT;
-    file->depend_on = burgerzone;
-    file->name = my_strdup("file");
+    file->depend_on = depend;
+    file->name = my_strdup("about");
     file->draw_f = salad_draw;
-    file->press_f = file_press;
+    file->press_f = about_press;
     return file;
 }
