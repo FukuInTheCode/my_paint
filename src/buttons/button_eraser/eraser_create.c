@@ -10,6 +10,9 @@
 eraser_t *eraser_create(void)
 {
     eraser_t *eraser = malloc(sizeof(eraser_t));
+    sfTexture *texture =
+        sfTexture_createFromFile("src/assets/eraser.jpg", NULL);
+    sfVector2f scale = {0.13f, 0.13f};
 
     eraser->is_clicked = false;
     eraser->rect = sfRectangleShape_create();
@@ -18,9 +21,7 @@ eraser_t *eraser_create(void)
     sfRectangleShape_setFillColor(eraser->rect, sfWhite);
     sfRectangleShape_setOutlineColor(eraser->rect, sfBlack);
     sfRectangleShape_setOutlineThickness(eraser->rect, 2);
-    sfTexture *texture = sfTexture_createFromFile("src/assets/eraser.jpg", NULL);
     sfSprite_setTexture(eraser->sprite, texture, sfTrue);
-    sfVector2f scale = {0.13f, 0.13f};
     sfSprite_setScale(eraser->sprite, scale);
     return eraser;
 }
