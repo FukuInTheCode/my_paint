@@ -18,5 +18,6 @@ zone_t *canvazone_create(void)
     zone->name = my_strdup("canva");
     zone->depend_corner = UPPER_LEFT;
     zone->draw_f = canvazone_draw;
+    zone->hover_f = canvazone_hover;
     return zone;
 }
