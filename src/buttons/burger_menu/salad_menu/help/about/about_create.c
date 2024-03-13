@@ -19,5 +19,6 @@ zone_t *about_create(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("about");
     file->draw_f = salad_draw;
+    file->press_f = about_press;
     return file;
 }

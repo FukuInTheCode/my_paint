@@ -19,5 +19,6 @@ zone_t *subhelp_create(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("subhelp");
     file->draw_f = salad_draw;
+    file->press_f = subhelp_press;
     return file;
 }
