@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-delimitator_t *delimitator_create(window_t *window)
+delimitator_t *delimitator_create(void)
 {
     delimitator_t *delimitator = malloc(sizeof(delimitator_t));
     sfColor grey_color = sfColor_fromRGB(195, 195, 195);
