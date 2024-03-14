@@ -179,6 +179,7 @@ int file_press(zone_t *, window_t *);
 int edit_press(zone_t *, window_t *);
 int help_press(zone_t *, window_t *);
 int salad_draw(zone_t *, window_t *);
+int salad_free(zone_t *);
 
 int about_press(zone_t *, window_t *);
 int subhelp_press(zone_t *, window_t *);
