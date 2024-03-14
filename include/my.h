@@ -151,6 +151,9 @@ typedef struct burger_s {
     zone_t *eraser;
     zone_t *about;
     zone_t *subhelp;
+    bool is_file;
+    bool is_edit;
+    bool is_help;
 } burger_t;
 
 burger_t *burger_create(void);

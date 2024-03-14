@@ -12,6 +12,9 @@ burger_t *burger_create(void)
     burger_t *burger = malloc(sizeof(burger_t));
 
     burger->is_clicked = false;
+    burger->is_edit = false;
+    burger->is_file = false;
+    burger->is_help = false;
     burger->rect = sfRectangleShape_create();
     sfRectangleShape_setSize(burger->rect, (sfVector2f){100, 100});
     sfRectangleShape_setFillColor(burger->rect, sfWhite);
