@@ -20,5 +20,6 @@ zone_t *quit_create(zone_t *depend)
     file->name = my_strdup("quit");
     file->draw_f = salad_draw;
     file->press_f = quit_press;
+    file->hover_f = salad_hover;
     return file;
 }

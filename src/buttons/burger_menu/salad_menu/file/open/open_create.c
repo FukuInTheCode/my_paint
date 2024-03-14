@@ -19,5 +19,6 @@ zone_t *open_create(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("open");
     file->draw_f = salad_draw;
+    file->hover_f = salad_hover;
     return file;
 }

@@ -19,5 +19,6 @@ zone_t *pencil_create_salad(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("pencil");
     file->draw_f = salad_draw;
+    file->hover_f = salad_hover;
     return file;
 }

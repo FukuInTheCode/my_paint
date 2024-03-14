@@ -20,5 +20,6 @@ zone_t *save_create(zone_t *depend)
     file->name = my_strdup("save");
     file->draw_f = salad_draw;
     file->press_f = save_press;
+    file->hover_f = salad_hover;
     return file;
 }
