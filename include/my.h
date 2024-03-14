@@ -133,6 +133,7 @@ canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
 int canva_draw(canva_t *, sfRenderWindow *);
+int canva_save(canva_t *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
@@ -177,6 +178,7 @@ zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
+int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
 zone_t *about_create(zone_t *);
 zone_t *subhelp_create(zone_t *);
