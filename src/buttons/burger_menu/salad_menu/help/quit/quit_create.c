@@ -19,5 +19,6 @@ zone_t *quit_create(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("quit");
     file->draw_f = salad_draw;
+    file->press_f = quit_press;
     return file;
 }
