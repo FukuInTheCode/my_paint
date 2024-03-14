@@ -222,3 +222,16 @@ int delimitator_destroy(delimitator_t *);
 int delimitator_draw(delimitator_t *, window_t *);
 zone_t *delimitatorzone_create(void);
 int delimitatorzone_draw(zone_t *, window_t *);
+
+typedef struct shape_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfCircleShape *circle;
+    sfRectangleShape *rect_inside;
+} shape_t;
+
+shape_t *shapes_create(void);
+int shapes_destroy(shape_t *);
+int shapes_draw(shape_t *, window_t *);
+zone_t *shapeszone_create(window_t *);
+int shapeszone_draw(zone_t *, window_t *);
