@@ -10,9 +10,9 @@
 int sidemenu_draw(sidemenu_t *sidemenu, window_t *window)
 {
     sfVector2f corner_position =
-            zone_get_corner(window, zone_get(window->head, "button_shapes"));
+            zone_get_corner(window, zone_get(window->head, "button_sidemenu"));
 
-    sfRectangleShape_setPosition(sidemenu->rect, corner_position);
+    sfRectangleShape_setPosition(sidemenu->rect, (sfVector2f) {corner_position.x, corner_position.y + 300});
     sfRenderWindow_drawRectangleShape(window->window, sidemenu->rect, NULL);
     return 0;
 }

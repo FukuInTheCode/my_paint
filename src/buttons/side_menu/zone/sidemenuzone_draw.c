@@ -9,5 +9,5 @@
 
 int sidemenuzone_draw(zone_t *sidemenu, window_t *window)
 {
-    return sidemenu_draw(sidemenuzone->extra_information, window);
+    return sidemenu_draw(sidemenu->extra_information, window);
 }

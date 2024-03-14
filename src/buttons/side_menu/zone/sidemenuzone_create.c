@@ -10,7 +10,7 @@
 zone_t *sidemenuzone_create(window_t *window)
 {
     zone_t *zone = zone_create();
-    shape_t *sidemenu = sidemenu_create();
+    sidemenu_t *sidemenu = sidemenu_create();
 
     zone->extra_information = (void *)sidemenu;
     zone->name = my_strdup("button_sidemenu");
