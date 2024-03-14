@@ -226,7 +226,8 @@ int delimitatorzone_draw(zone_t *, window_t *);
 typedef struct shape_s {
     bool is_clicked;
     sfRectangleShape *rect;
-    sfSprite *sprite;
+    sfCircleShape *circle;
+    sfRectangleShape *rect_inside;
 } shape_t;
 
 shape_t *shapes_create(void);
