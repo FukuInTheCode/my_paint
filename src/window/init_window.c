@@ -22,5 +22,6 @@ int init_struct_window(window_t *window)
     zone_add(&window->head, pencilzone_create(window));
     zone_add(&window->head, eraserzone_create(window));
     zone_add(&window->head, shapeszone_create(window));
+    zone_add(&window->head, sidemenuzone_create(window));
     return 0;
 }
