@@ -34,6 +34,7 @@
 typedef int(*draw_window_func)();
 typedef int(*press_window_func)();
 typedef int(*hover_window_func)();
+typedef int(*free_window_func)();
 
 typedef enum corner_u {
     UPPER_LEFT,
@@ -52,6 +53,7 @@ typedef struct zone_s {
     draw_window_func draw_f;
     press_window_func press_f;
     hover_window_func hover_f;
+    free_window_func free_f;
     void *extra_information;
     struct zone_s *next;
     struct zone_s *prev;
