@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include <SFML/Window/WindowBase.h>
 
 int init_struct_window(window_t *window)
 {
@@ -22,5 +21,6 @@ int init_struct_window(window_t *window)
     zone_add(&window->head, pencilzone_create(window));
     zone_add(&window->head, eraserzone_create(window));
     zone_add(&window->head, shapeszone_create(window));
+    zone_add(&window->head, bucketzone_create(window));
     return 0;
 }
