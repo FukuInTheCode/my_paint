@@ -26,7 +26,6 @@ int my_gimp(void)
         return 84;
     if (create_window(&window, &event) == 84)
         return 84;
-    printf("fsdf\n");
     megatron_free(&window);
     return 0;
 }
