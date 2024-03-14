@@ -10,7 +10,6 @@
 
 int help_press(zone_t *zone, window_t *window)
 {
-    static bool help_is_pressed = false;
     burger_t *burger = zone_get(window->head, "burger")->extra_information;
 
     zone_remove(&window->head, "pencil");
@@ -18,14 +17,16 @@ int help_press(zone_t *zone, window_t *window)
     zone_remove(&window->head, "open");
     zone_remove(&window->head, "save");
     zone_remove(&window->head, "quit");
-    if (!help_is_pressed) {
+    if (!burger->is_help) {
         zone_add(&window->head, burger->subhelp);
         zone_add(&window->head, burger->about);
-        help_is_pressed = true;
+        burger->is_edit = false;
+        burger->is_file = false;
+        burger->is_help = true;
     } else {
         zone_remove(&window->head, "subhelp");
         zone_remove(&window->head, "about");
-        help_is_pressed = false;
+        burger->is_help = false;
     }
     return 0;
 }

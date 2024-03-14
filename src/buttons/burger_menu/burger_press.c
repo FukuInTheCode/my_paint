@@ -7,6 +7,15 @@
 
 #include "my.h"
 
+static int change_to_false(burger_t *burger)
+{
+    burger->is_clicked = false;
+    burger->is_edit = false;
+    burger->is_help = false;
+    burger->is_file = false;
+    return 0;
+}
+
 int burger_press(burger_t *burger, window_t *window)
 {
     if (!zone_get(window->head, "file")) {
@@ -15,7 +24,7 @@ int burger_press(burger_t *burger, window_t *window)
         zone_add(&window->head, burger->edit);
         zone_add(&window->head, burger->help);
     } else {
-        burger->is_clicked = false;
+        change_to_false(burger);
         zone_remove(&window->head, "file");
         zone_remove(&window->head, "edit");
         zone_remove(&window->head, "help");
