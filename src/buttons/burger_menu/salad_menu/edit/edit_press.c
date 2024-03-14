@@ -17,6 +17,7 @@ int edit_press(zone_t *zone, window_t *window)
     zone_remove(&window->head, "open");
     zone_remove(&window->head, "save");
     zone_remove(&window->head, "quit");
+    zone_remove(&window->head, "new");
     if (!burger->is_edit) {
         zone_add(&window->head, burger->pencil);
         zone_add(&window->head, burger->eraser);

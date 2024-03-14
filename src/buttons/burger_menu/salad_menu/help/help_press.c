@@ -16,6 +16,7 @@ int help_press(zone_t *zone, window_t *window)
     zone_remove(&window->head, "eraser");
     zone_remove(&window->head, "open");
     zone_remove(&window->head, "save");
+    zone_remove(&window->head, "new");
     if (!burger->is_help) {
         zone_add(&window->head, burger->subhelp);
         zone_add(&window->head, burger->about);

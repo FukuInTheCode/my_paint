@@ -9,7 +9,8 @@
 
 static int create_other(burger_t *burger)
 {
-    burger->open = open_create(burger->file);
+    burger->new_file = new_file_create(burger->file);
+    burger->open = open_create(burger->new_file);
     burger->save = save_create(burger->open);
     burger->pencil = pencil_create_salad(burger->edit);
     burger->eraser = eraser_create_salad(burger->pencil);

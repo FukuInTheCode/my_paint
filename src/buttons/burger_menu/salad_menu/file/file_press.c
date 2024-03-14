@@ -19,13 +19,15 @@ int file_press(zone_t *zone, window_t *window)
     zone_remove(&window->head, "quit");
     if (!burger->is_file) {
         zone_add(&window->head, burger->open);
-        zone_add(&window->head, burger->save);
         burger->is_help = false;
+        zone_add(&window->head, burger->save);
+        zone_add(&window->head, burger->new_file);
         burger->is_edit = false;
         burger->is_file = true;
     } else {
         zone_remove(&window->head, "open");
         zone_remove(&window->head, "save");
+        zone_remove(&window->head, "new");
         burger->is_file = false;
     }
     return 0;

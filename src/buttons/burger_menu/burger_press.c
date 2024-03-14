@@ -23,6 +23,7 @@ static int change_to_false(burger_t *burger, window_t *window)
     zone_remove(&window->head, "eraser");
     zone_remove(&window->head, "subhelp");
     zone_remove(&window->head, "about");
+    zone_remove(&window->head, "new");
     return 0;
 }
 
