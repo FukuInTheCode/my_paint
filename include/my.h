@@ -235,3 +235,14 @@ int shapes_destroy(shape_t *);
 int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
+
+typedef struct sidemenu_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+} sidemenu_t;
+
+sidemenu_t *sidemenu_create(void);
+int sidemenu_destroy(sidemenu_t *);
+int sidemenu_draw(sidemenu_t *, window_t *);
+zone_t *sidemenuzone_create(window_t *);
+int sidemenuzone_draw(zone_t *, window_t *);
