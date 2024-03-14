@@ -17,5 +17,11 @@ shape_t *shapes_create(void)
     sfRectangleShape_setFillColor(shape->rect, sfWhite);
     sfRectangleShape_setOutlineColor(shape->rect, sfBlack);
     sfRectangleShape_setOutlineThickness(shape->rect, 2);
+    shape->circle = sfCircleShape_create();
+    sfCircleShape_setRadius(shape->circle, 10);
+    sfCircleShape_setFillColor(shape->circle, sfRed);
+    shape->rect_inside = sfRectangleShape_create();
+    sfRectangleShape_setSize(shape->rect_inside, (sfVector2f){25, 17});
+    sfRectangleShape_setFillColor(shape->rect_inside, sfBlue);
     return shape;
 }
