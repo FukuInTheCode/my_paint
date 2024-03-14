@@ -235,3 +235,15 @@ int shapes_destroy(shape_t *);
 int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
+
+typedef struct bucket_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} bucket_t;
+
+bucket_t *bucket_create(void);
+int bucket_destroy(bucket_t *);
+int bucket_draw(bucket_t *, window_t *);
+zone_t *bucketzone_create(window_t *);
+int bucketzone_draw(zone_t *, window_t *);
