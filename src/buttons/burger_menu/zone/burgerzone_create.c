@@ -38,5 +38,6 @@ zone_t *burgerzone_create(void)
     create_other(burger);
     zone->size.x = 100;
     zone->size.y = 100;
+    zone->adjust = (sfVector2f){10, 10};
     return zone;
 }
