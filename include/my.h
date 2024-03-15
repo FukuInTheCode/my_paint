@@ -367,3 +367,5 @@ zone_t *textzone_create(zone_t *);
 int textzone_draw(zone_t *, window_t *);
 int textzone_press(zone_t *, window_t *);
 char const *text_get_new_text(void);
+
+int is_all_here(void);

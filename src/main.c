@@ -20,7 +20,7 @@ int main(int argc, char **argv, char **envp)
 {
     int error = 0;
 
-    if (is_env_good(envp) == 84)
+    if (is_env_good(envp) == 84 || is_all_here() == 84)
         return 84;
     error = display_help(argc, argv, "src/assets/help.txt");
     if (error == 1)
