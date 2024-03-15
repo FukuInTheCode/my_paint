@@ -10,24 +10,23 @@
 │ * How to use it?                                                             │
 │   MY_PAINT offers an extensive array of tools and features to facilitate     │
 │   your artistic endeavors:                                                   │
-│   - Eraser functionality                                                     │
-│   - Basic shapes                                                             │
-│   - Precise selection tools                                                  │
-│   - Adjustable pen/pencil tool                                               │
-│   - Fill tool                                                                │
+│   - Eraser functionality --> the second little button or in the drop menu    │
+│   - Basic shapes --> the third little button                                 │
+│   - Adjustable pen/pencil tool --> inside the drop menu                      │
+│   - Drop menu --> the big button                                             │
+│   - Easter egg --> a little sentence for make your day better                │
 │   ...and more.                                                               │
 │                                                                              │
 │                                                                              │
 │ * Key Features:                                                              │
-│   - Infinite Canvas: Supports canvas sizes up to 10,000 x 10,000 pixels      │
 │   - Resizable Window: Customize window size                                  │
 │   - Tools: Various drawing and editing tools                                 │
 │   - Buttons: Multi-state buttons for different functionalities               │
 │   - Menu Bar: File, Edit, Help options                                       │
 │   - Side Menu: Tool-specific options                                         │
 │   - Mouse Drawing: Precise control with mouse input                          │
-│   - Image Save: Save images in .jpg format                                   │
-│   - File Operations: Open, save, and manage files                            │
+│   - Image Save: Save images in .png, .jpg, .tga, and .bmp format             │
+│   - File Operations: Save files                                              │
 │   - Color Management: Easily manage and select colors                        │
 │                                                                              │
 ╰──────────────────────────────────────────────────────────────────────────────╯
