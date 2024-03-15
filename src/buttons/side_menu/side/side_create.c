@@ -12,7 +12,7 @@ side_t *side_create(void)
     side_t *side = malloc(sizeof(side_t));
 
     side->rect = sfRectangleShape_create();
-    sfRectangleShape_setSize(side->rect, (sfVector2f){100, 50});
+    sfRectangleShape_setSize(side->rect, (sfVector2f){100, 200});
     sfRectangleShape_setFillColor(side->rect, sfWhite);
     sfRectangleShape_setOutlineColor(side->rect, sfBlack);
     sfRectangleShape_setOutlineThickness(side->rect, 5);

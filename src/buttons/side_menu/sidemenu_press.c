@@ -12,9 +12,8 @@ int sidemenu_press(sidemenu_t *sidemenu, window_t *window)
     if (sidemenu->is_clicked == false) {
         sidemenu->is_clicked = true;
         zone_add(&window->head, sidemenu->side);
-        //zone_add(&window->head, sidemenu->plus);
-        //zone_add(&window->head, sidemenu->moins);
-        //zone_add(&window->head, sidemenu->see_color);
+        zone_add(&window->head, sidemenu->plus);
+        zone_add(&window->head, sidemenu->moins);
     } else {
         sidemenu->is_clicked = false;
         zone_remove(&window->head, "side");

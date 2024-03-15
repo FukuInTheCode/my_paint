@@ -260,6 +260,16 @@ typedef struct side_s {
 
 side_t *side_create(void);
 int side_draw(side_t *, window_t *);
-zone_t *sidezone_create(window_t *);
+zone_t *sidezone_create(zone_t *);
 int sidezone_draw(zone_t *, window_t *);
-zone_t *plus_create(void);
+zone_t *plus_create(zone_t *);
+zone_t *minus_create(zone_t *);
+int minus_press(zone_t *, window_t *);
+int plus_press(zone_t *, window_t *);
+
+typedef struct caca_s {
+    sfSprite *sprite;
+} caca_t;
+
+caca_t *caca_create(char const *, sfVector2f);
+int caca_draw(zone_t *, window_t *);

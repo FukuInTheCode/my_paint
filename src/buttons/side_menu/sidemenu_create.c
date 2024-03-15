@@ -15,7 +15,7 @@ sidemenu_t *sidemenu_create(void)
 
     sidemenu->is_clicked = false;
     sidemenu->rect = sfRectangleShape_create();
-    sfRectangleShape_setSize(sidemenu->rect, (sfVector2f){50, 200});
+    sfRectangleShape_setSize(sidemenu->rect, (sfVector2f){50, 100});
     sfRectangleShape_setFillColor(sidemenu->rect, grey_color);
     sfRectangleShape_setOutlineColor(sidemenu->rect, grey_color_border);
     sfRectangleShape_setOutlineThickness(sidemenu->rect, 2);
