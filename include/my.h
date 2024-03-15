@@ -305,6 +305,7 @@ int color_destroy(color_t *);
 int color_draw(color_t *, window_t *);
 int color_press(color_t *, window_t *);
 int colorzone_press(zone_t *, window_t *);
+int colorzone_draw(zone_t *, window_t *);
 zone_t *colorzone_create(window_t *);
 
 typedef struct text_s {
