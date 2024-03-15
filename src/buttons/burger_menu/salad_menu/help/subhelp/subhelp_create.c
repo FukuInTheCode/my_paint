@@ -14,7 +14,7 @@ zone_t *subhelp_create(zone_t *depend)
     file->priority = 3;
     file->size.x = 100;
     file->size.y = 50;
-    file->extra_information = salad_create("subhelp");
+    file->extra_information = salad_create("help");
     file->depend_corner = UPPER_RIGHT;
     file->depend_on = depend;
     file->name = my_strdup("subhelp");

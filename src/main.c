@@ -18,9 +18,14 @@ static int is_env_good(char **envp)
 
 int main(int argc, char **argv, char **envp)
 {
+    int error = 0;
+
     if (is_env_good(envp) == 84)
         return 84;
-    if (display_help(argc, argv, "src/assets/help.txt") == 84)
+    error = display_help(argc, argv, "src/assets/help.txt");
+    if (error == 1)
+        return 0;
+    if (error == 84)
         return 84;
     if (argc != 1)
         return 84;

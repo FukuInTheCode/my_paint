@@ -25,13 +25,13 @@ int open_help(char const *path)
     write(1, buffer, file_info.st_size);
     close(fd);
     free(buffer);
-    return 0;
+    return 1;
 }
 
 int display_help(int argc, char **argv, char const *path)
 {
     if (argc == 2 && argv[1] != NULL && argv[1][0] == '-'
         && argv[1][1] == 'h' && argv[1][2] == '\0')
-        open_help(path);
+        return open_help(path);
     return 0;
 }
