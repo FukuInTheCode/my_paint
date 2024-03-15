@@ -283,7 +283,7 @@ zone_t *bucketzone_create(window_t *);
 int bucketzone_draw(zone_t *, window_t *);
 
 static __attribute_used__ char const *funny_text[] = {
-   "Oh le segfault la, Tom Carlier - 2024",
+    "Oh le segfault la, Tom Carlier - 2024",
     "Qu'est-ce qui est jaune et qui attend ?   Jonathan.",
     "Alors vous en pensez quoi de ce paint ?",
     "La creativite est contagieuse, faites-la circuler.",
