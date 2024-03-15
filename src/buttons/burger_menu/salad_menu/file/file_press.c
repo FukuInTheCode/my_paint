@@ -12,8 +12,7 @@ int file_press(zone_t *zone, window_t *window)
 {
     burger_t *burger = zone_get(window->head, "burger")->extra_information;
 
-    zone_remove(&window->head, "subhelp");
-    zone_remove(&window->head, "about");
+    zone_remove(&window->head, "subhelp"), zone_remove(&window->head, "about");
     zone_remove(&window->head, "pencil");
     zone_remove(&window->head, "eraser");
     zone_remove(&window->head, "quit");
