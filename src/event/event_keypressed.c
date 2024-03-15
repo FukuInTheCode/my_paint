@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include <SFML/Window/Keyboard.h>
 
 int event_keypressed(window_t *window, sfEvent *event)
 {
