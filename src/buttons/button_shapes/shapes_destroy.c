@@ -10,6 +10,7 @@
 int shapes_destroy(shape_t *shape)
 {
     sfRectangleShape_destroy(shape->rect);
+    sfCircleShape_destroy(shape->circle);
     free(shape);
     return 0;
 }
