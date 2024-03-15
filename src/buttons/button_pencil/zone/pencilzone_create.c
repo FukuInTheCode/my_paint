@@ -22,5 +22,6 @@ zone_t *pencilzone_create(window_t *window)
     zone->size.y = 40;
     zone->adjust = (sfVector2f){20, 30};
     zone->free_f = pencil_destroy;
+    zone->press_f = pencilzone_press;
     return zone;
 }

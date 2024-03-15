@@ -229,6 +229,7 @@ int pencil_destroy(pencil_t *);
 int pencil_draw(pencil_t *, window_t *);
 zone_t *pencilzone_create(window_t *);
 int pencilzone_draw(zone_t *, window_t *);
+int pencilzone_press(zone_t *, window_t *);
 
 typedef struct eraser_s {
     bool is_clicked;
@@ -241,6 +242,7 @@ int eraser_destroy(eraser_t *);
 int eraser_draw(eraser_t *, window_t *);
 zone_t *eraserzone_create(window_t *);
 int eraserzone_draw(zone_t *, window_t *);
+int eraserzone_press(zone_t *, window_t *);
 
 typedef struct delimitator_s {
     sfRectangleShape *rect;
