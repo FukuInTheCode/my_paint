@@ -273,3 +273,4 @@ typedef struct caca_s {
 
 caca_t *caca_create(char const *, sfVector2f);
 int caca_draw(zone_t *, window_t *);
+int caca_hover(zone_t *, window_t *);
