@@ -239,10 +239,27 @@ int shapeszone_draw(zone_t *, window_t *);
 typedef struct sidemenu_s {
     bool is_clicked;
     sfRectangleShape *rect;
+    zone_t *side;
+    zone_t *plus;
+    zone_t *moins;
+    zone_t *see_color;
 } sidemenu_t;
 
 sidemenu_t *sidemenu_create(void);
 int sidemenu_destroy(sidemenu_t *);
 int sidemenu_draw(sidemenu_t *, window_t *);
+int sidemenu_hover(sidemenu_t *, window_t *);
+int sidemenu_press(sidemenu_t *, window_t *);
 zone_t *sidemenuzone_create(window_t *);
 int sidemenuzone_draw(zone_t *, window_t *);
+int sidemenuzone_press(zone_t *, window_t *);
+
+typedef struct side_s {
+    sfRectangleShape *rect;
+} side_t;
+
+side_t *side_create(void);
+int side_draw(side_t *, window_t *);
+zone_t *sidezone_create(window_t *);
+int sidezone_draw(zone_t *, window_t *);
+zone_t *plus_create();
