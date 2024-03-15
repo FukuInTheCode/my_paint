@@ -265,6 +265,7 @@ int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
 int shapeszone_press(zone_t *, window_t *);
+int shapeszone_hover(zone_t *, window_t *);
 
 typedef struct bucket_s {
     bool is_clicked;
