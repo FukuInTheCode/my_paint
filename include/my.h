@@ -139,6 +139,8 @@ int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
 int layer_use(layer_t *, window_t *, sfVector2f, canva_t *);
 int layer_draw_trail(layer_t *, sfVector2f, window_t *, canva_t *);
+int layer_draw_rect(layer_t *, sfVector2f, window_t *, canva_t *);
+int layer_draw_circle(layer_t *, sfVector2f, window_t *, canva_t *);
 
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
@@ -262,6 +264,7 @@ int shapes_destroy(shape_t *);
 int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
+int shapeszone_press(zone_t *, window_t *);
 
 typedef struct bucket_s {
     bool is_clicked;
