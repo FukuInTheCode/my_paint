@@ -10,7 +10,7 @@
 int init_struct_window(window_t *window)
 {
     window->window = sfRenderWindow_create((sfVideoMode){1920, 1080, 32},
-        "My Gimp :)", sfTitlebar | sfClose, NULL);
+        "My Gimp :)", sfDefaultStyle, NULL);
     if (!window->window)
         return 84;
     window->head = canvazone_create();
