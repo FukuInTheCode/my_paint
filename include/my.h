@@ -296,6 +296,13 @@ static __attribute_used__ char const *funny_text[] = {
     " orange, mais violettes.",
     "Le saviez-vous ? Le cerveau humain a plus de\n"
     " connexions que les etoiles dans la galaxie.",
+    "Tom est nul a Mario Kart",
+    "Etre ou ne pas etre tel n'est pas la question",
+    "15 Mars 2024, dans 7 min le my_paint est termine\n"
+    "on veut mourir",
+    "10k l'annee pour pas avoir de place",
+    "Coucou l'AER",
+    "tu peux nous mettre une bonne note ?",
     NULL
 };
 
