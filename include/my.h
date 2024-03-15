@@ -275,8 +275,8 @@ int bucket_draw(bucket_t *, window_t *);
 zone_t *bucketzone_create(window_t *);
 int bucketzone_draw(zone_t *, window_t *);
 
-static char const *funny_text[] = {
-    "Oh le segfault là, Tom Carlier - 2024",
+static __attribute_used__ char const *funny_text[] = {
+   "Oh le segfault là, Tom Carlier - 2024",
     "Qu'est-ce qui est jaune et qui attend ?\nJonathan.",
     "Alors vous en pensez quoi de ce paint ?",
     "La créativité est contagieuse, faites-la circuler.",
@@ -291,3 +291,19 @@ static char const *funny_text[] = {
     " connexions que les étoiles dans la galaxie.",
     NULL
 };
+
+
+typedef struct color_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} color_t;
+
+
+color_t *color_create(void);
+int color_destroy(color_t *);
+int color_draw(color_t *, window_t *);
+int color_press(color_t *, window_t *);
+int colorzone_draw(zone_t *, window_t *);
+int colorzone_press(zone_t *, window_t *);
+zone_t *colorzone_create(window_t *);
