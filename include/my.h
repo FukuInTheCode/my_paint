@@ -154,6 +154,7 @@ typedef struct burger_s {
     zone_t *eraser;
     zone_t *about;
     zone_t *subhelp;
+    zone_t *new_file;
     bool is_file;
     bool is_edit;
     bool is_help;
@@ -175,11 +176,13 @@ typedef struct salad_s {
 } salad_t;
 
 salad_t *salad_create(char const *);
+int salad_hover(zone_t *, window_t *);
 zone_t *file_create(zone_t *);
 zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
+zone_t *new_file_create(zone_t *);
 int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
 int quit_press(zone_t *, window_t *);
