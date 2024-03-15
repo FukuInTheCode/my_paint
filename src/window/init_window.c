@@ -15,7 +15,6 @@ int init_struct_window(window_t *window)
         return 84;
     window->head = canvazone_create();
     zone_set_size(window->head, window, (sfVector2f){1920, 1080});
-    canva_add_layer(window->head->extra_information, layer_create());
     zone_add(&window->head, delimitatorzone_create());
     zone_add(&window->head, burgerzone_create());
     zone_add(&window->head, pencilzone_create(window));
