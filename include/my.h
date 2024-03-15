@@ -274,3 +274,20 @@ int bucket_destroy(bucket_t *);
 int bucket_draw(bucket_t *, window_t *);
 zone_t *bucketzone_create(window_t *);
 int bucketzone_draw(zone_t *, window_t *);
+
+static char const *funny_text[] = {
+    "Oh le segfault là, Tom Carlier - 2024",
+    "Qu'est-ce qui est jaune et qui attend ?\nJonathan.",
+    "Alors vous en pensez quoi de ce paint ?",
+    "La créativité est contagieuse, faites-la circuler.",
+    "Mon niveau de sarcasme dépend"
+    "directement de votre niveau de stupidité.",
+    "Le saviez-vous ? Les abeilles dorment parfois dans des fleurs.",
+    "Le saviez-vous ? L'hippopotomonstrosesquippedaliophobie "
+    "est la peur des mots longs.",
+    "Le saviez-vous ? Les carottes n'étaient pas toujours"
+    " orange, mais violettes.",
+    "Le saviez-vous ? Le cerveau humain a plus de"
+    " connexions que les étoiles dans la galaxie.",
+    NULL
+};
