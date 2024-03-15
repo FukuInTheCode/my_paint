@@ -16,7 +16,7 @@ zone_t *sidemenuzone_create(window_t *window)
     zone->name = my_strdup("button_sidemenu");
     zone->depend_corner = LOWER_LEFT;
     zone->depend_on = zone_get(window->head, "burger");
-    zone->priority = 2;
+    zone->priority = 3;
     zone->draw_f = sidemenuzone_draw;
     zone->press_f = sidemenuzone_press;
     sidemenu->side = sidezone_create(zone);
@@ -24,6 +24,6 @@ zone_t *sidemenuzone_create(window_t *window)
     sidemenu->moins = minus_create(sidemenu->side);
     zone->size.x = 50;
     zone->size.y = 100;
-    zone->adjust = (sfVector2f){0, 400};
+    zone->adjust = (sfVector2f){-10, 400};
     return zone;
 }

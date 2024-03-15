@@ -25,5 +25,6 @@ int init_struct_window(window_t *window)
     zone_add(&window->head, colorzone_create(window));
     zone_add(&window->head, textzone_create(zone_get(
         window->head, "button_color")));
+    zone_add(&window->head, sidemenuzone_create(window));
     return 0;
 }

@@ -11,7 +11,7 @@ zone_t *minus_create(zone_t *depend_on)
 {
     zone_t *plus = zone_create();
 
-    plus->priority = 4;
+    plus->priority = 5;
     plus->extra_information = caca_create("src/assets/minus.jpeg",
         (sfVector2f){8e-2, 8e-2});
     plus->size = (sfVector2f){80, 50};

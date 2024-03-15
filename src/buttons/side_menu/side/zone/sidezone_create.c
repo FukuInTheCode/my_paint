@@ -16,7 +16,7 @@ zone_t *sidezone_create(zone_t *depend_on)
     zone->name = my_strdup("side");
     zone->depend_corner = UPPER_LEFT;
     zone->depend_on = depend_on;
-    zone->priority = 3;
+    zone->priority = 4;
     zone->draw_f = sidezone_draw;
     zone->size = (sfVector2f){100, 200};
     zone->adjust = (sfVector2f){0, -50};

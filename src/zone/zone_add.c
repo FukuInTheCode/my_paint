@@ -22,6 +22,7 @@ int zone_add(zone_t **head, zone_t *new)
         if (new->next)
             new->next->prev = new;
         tmp = new;
+        return 0;
     }
     return 0;
 }
