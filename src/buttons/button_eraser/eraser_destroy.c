@@ -10,6 +10,7 @@
 int eraser_destroy(eraser_t *eraser)
 {
     sfRectangleShape_destroy(eraser->rect);
+    sfTexture_destroy((void *)sfSprite_getTexture(eraser->sprite));
     sfSprite_destroy(eraser->sprite);
     free(eraser);
     return 0;

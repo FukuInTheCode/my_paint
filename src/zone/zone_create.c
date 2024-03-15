@@ -21,6 +21,7 @@ zone_t *zone_create(void)
     ret->draw_f = NULL;
     ret->press_f = NULL;
     ret->hover_f = NULL;
+    ret->free_f = NULL;
     ret->extra_information = NULL;
     ret->next = NULL;
     ret->prev = NULL;

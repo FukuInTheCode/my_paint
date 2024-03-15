@@ -32,6 +32,7 @@ zone_t *burgerzone_create(void)
     zone->draw_f = burgerzone_draw;
     zone->press_f = burgerzone_press;
     zone->hover_f = burgerzone_hover;
+    zone->free_f = burger_destroy;
     burger->file = file_create(zone);
     burger->edit = edit_create(burger->file);
     burger->help = help_create(burger->edit);
