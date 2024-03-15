@@ -64,12 +64,21 @@ typedef struct layer_s {
     struct layer_s *next;
 } layer_t;
 
+typedef enum canva_mode_e {
+    ERASER,
+    PENCIL,
+    CIRCLE,
+    RECT
+} canva_mode_t;
+
 typedef struct canva_s {
     layer_t *main;
     layer_t *layers;
     draw_window_func use_f;
     sfColor color;
-    int radius;
+    float radius;
+    float last_radius;
+    canva_mode_t mode;
 } canva_t;
 
 typedef struct window_s {
@@ -133,6 +142,10 @@ canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
 int canva_draw(canva_t *, sfRenderWindow *);
+int canva_setcolor(canva_t *, sfColor);
+float canva_getsize(canva_t *);
+int canva_setsize(canva_t *, float);
+int canva_setmode(canva_t *, canva_mode_t);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
@@ -179,6 +192,8 @@ zone_t *about_create(zone_t *);
 zone_t *subhelp_create(zone_t *);
 zone_t *pencil_create_salad(zone_t *);
 zone_t *eraser_create_salad(zone_t *);
+int eraser_burger_press(zone_t *, window_t *);
+int pencil_burger_press(zone_t *, window_t *);
 int file_press(zone_t *, window_t *);
 int edit_press(zone_t *, window_t *);
 int help_press(zone_t *, window_t *);
