@@ -19,5 +19,6 @@ zone_t *eraser_create_salad(zone_t *depend)
     file->depend_on = depend;
     file->name = my_strdup("eraser");
     file->draw_f = salad_draw;
+    file->press_f = eraser_burger_press;
     return file;
 }
