@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include <SFML/Graphics/Color.h>
 
 int burger_hover(burger_t *burger, window_t *window)
 {
