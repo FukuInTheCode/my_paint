@@ -139,6 +139,8 @@ int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
 int layer_use(layer_t *, window_t *, sfVector2f, canva_t *);
 int layer_draw_trail(layer_t *, sfVector2f, window_t *, canva_t *);
+int layer_draw_rect(layer_t *, sfVector2f, window_t *, canva_t *);
+int layer_draw_circle(layer_t *, sfVector2f, window_t *, canva_t *);
 
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
@@ -196,6 +198,7 @@ zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
 zone_t *new_file_create(zone_t *);
+int new_press(zone_t *, window_t *);
 int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
 int quit_press(zone_t *, window_t *);
@@ -227,6 +230,7 @@ int pencil_destroy(pencil_t *);
 int pencil_draw(pencil_t *, window_t *);
 zone_t *pencilzone_create(window_t *);
 int pencilzone_draw(zone_t *, window_t *);
+int pencilzone_press(zone_t *, window_t *);
 
 typedef struct eraser_s {
     bool is_clicked;
@@ -239,6 +243,7 @@ int eraser_destroy(eraser_t *);
 int eraser_draw(eraser_t *, window_t *);
 zone_t *eraserzone_create(window_t *);
 int eraserzone_draw(zone_t *, window_t *);
+int eraserzone_press(zone_t *, window_t *);
 
 typedef struct delimitator_s {
     sfRectangleShape *rect;
@@ -262,6 +267,8 @@ int shapes_destroy(shape_t *);
 int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
+int shapeszone_press(zone_t *, window_t *);
+int shapeszone_hover(zone_t *, window_t *);
 
 typedef struct bucket_s {
     bool is_clicked;

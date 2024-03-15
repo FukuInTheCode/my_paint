@@ -22,5 +22,6 @@ zone_t *eraserzone_create(window_t *window)
     zone->size.y = 40;
     zone->adjust = (sfVector2f){20, 0};
     zone->free_f = eraser_destroy;
+    zone->press_f = eraserzone_press;
     return zone;
 }

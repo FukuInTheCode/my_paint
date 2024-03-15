@@ -33,7 +33,7 @@ int color_press(color_t *color, window_t *window)
         return 0;
     v2 = norme_vector((sfVector2f){v.x, v.y}, window);
     c = sfImage_getPixel(i, v2.x, v2.y);
-    if (canva->mode == PENCIL)
+    if (canva->mode != ERASER)
         canva_setcolor(canva, c);
     sfImage_destroy(i);
     return 0;

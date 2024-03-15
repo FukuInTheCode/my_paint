@@ -22,5 +22,7 @@ zone_t *shapeszone_create(window_t *window)
     zone->size.y = 40;
     zone->adjust = (sfVector2f){20, 0};
     zone->free_f = shapes_destroy;
+    zone->press_f = shapeszone_press;
+    zone->hover_f = shapeszone_hover;
     return zone;
 }
