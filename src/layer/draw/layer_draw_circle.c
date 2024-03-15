@@ -12,7 +12,6 @@ int layer_draw_circle(layer_t *layer, sfVector2f mouse, window_t *window,
 {
     sfCircleShape *c = sfCircleShape_create();
 
-
     if (sfMouse_isButtonPressed(sfMouseLeft)) {
         sfCircleShape_setRadius(c, canva->radius);
         sfCircleShape_setFillColor(c, canva->color);

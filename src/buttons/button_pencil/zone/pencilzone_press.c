@@ -18,4 +18,3 @@ int pencilzone_press(zone_t *z, window_t *w)
     canva->mode = PENCIL;
     return 0;
 }
-

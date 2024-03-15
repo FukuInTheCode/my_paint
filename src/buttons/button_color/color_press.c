@@ -11,6 +11,7 @@ static sfVector2f norme_vector(sfVector2f vec, window_t *window)
 {
     sfVector2f p = zone_get_corner(window,
         zone_get(window->head, "button_color"));
+
     vec.x -= p.x;
     vec.y -= p.y;
     return vec;

@@ -9,7 +9,6 @@
 
 int gestion_window(window_t *window)
 {
-
     sfVector2i tmp = sfMouse_getPositionRenderWindow(window->window);
     zone_t *hovered = zone_get_mouse(window->head, window,
         (sfVector2f){tmp.x, tmp.y});
