@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include <SFML/Window/WindowBase.h>
 
 int init_struct_window(window_t *window)
 {
