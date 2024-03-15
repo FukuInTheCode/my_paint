@@ -9,6 +9,9 @@
 
 int zone_destroy(zone_t *to_destroy)
 {
+    if (to_destroy->free_f)
+        to_destroy->free_f(to_destroy->extra_information);
+    free(to_destroy->name);
     free(to_destroy);
     return 0;
 }

@@ -22,6 +22,7 @@ int my_gimp(void)
     window_t window;
     sfEvent event;
 
+    srand(time(0));
     if (init_struct_window(&window) == 84)
         return 84;
     if (create_window(&window, &event) == 84)

@@ -20,5 +20,6 @@ zone_t *subhelp_create(zone_t *depend)
     file->name = my_strdup("subhelp");
     file->draw_f = salad_draw;
     file->press_f = subhelp_press;
+    file->hover_f = salad_hover;
     return file;
 }

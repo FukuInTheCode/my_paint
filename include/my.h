@@ -34,6 +34,7 @@
 typedef int(*draw_window_func)();
 typedef int(*press_window_func)();
 typedef int(*hover_window_func)();
+typedef int(*free_window_func)();
 
 typedef enum corner_u {
     UPPER_LEFT,
@@ -52,6 +53,7 @@ typedef struct zone_s {
     draw_window_func draw_f;
     press_window_func press_f;
     hover_window_func hover_f;
+    free_window_func free_f;
     void *extra_information;
     struct zone_s *next;
     struct zone_s *prev;
@@ -64,12 +66,21 @@ typedef struct layer_s {
     struct layer_s *next;
 } layer_t;
 
+typedef enum canva_mode_e {
+    ERASER,
+    PENCIL,
+    CIRCLE,
+    RECT
+} canva_mode_t;
+
 typedef struct canva_s {
     layer_t *main;
     layer_t *layers;
     draw_window_func use_f;
     sfColor color;
-    int radius;
+    float radius;
+    float last_radius;
+    canva_mode_t mode;
 } canva_t;
 
 typedef struct window_s {
@@ -133,6 +144,11 @@ canva_t *canva_create(void);
 int canva_destroy(canva_t *);
 int canva_add_layer(canva_t *, layer_t *);
 int canva_draw(canva_t *, sfRenderWindow *);
+int canva_setcolor(canva_t *, sfColor);
+float canva_getsize(canva_t *);
+int canva_setsize(canva_t *, float);
+int canva_setmode(canva_t *, canva_mode_t);
+int canva_save(canva_t *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
@@ -151,6 +167,10 @@ typedef struct burger_s {
     zone_t *eraser;
     zone_t *about;
     zone_t *subhelp;
+    zone_t *new_file;
+    bool is_file;
+    bool is_edit;
+    bool is_help;
 } burger_t;
 
 burger_t *burger_create(void);
@@ -169,20 +189,27 @@ typedef struct salad_s {
 } salad_t;
 
 salad_t *salad_create(char const *);
+int salad_hover(zone_t *, window_t *);
 zone_t *file_create(zone_t *);
 zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
+zone_t *new_file_create(zone_t *);
+int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
+int quit_press(zone_t *, window_t *);
 zone_t *about_create(zone_t *);
 zone_t *subhelp_create(zone_t *);
 zone_t *pencil_create_salad(zone_t *);
 zone_t *eraser_create_salad(zone_t *);
+int eraser_burger_press(zone_t *, window_t *);
+int pencil_burger_press(zone_t *, window_t *);
 int file_press(zone_t *, window_t *);
 int edit_press(zone_t *, window_t *);
 int help_press(zone_t *, window_t *);
 int salad_draw(zone_t *, window_t *);
+int salad_free(zone_t *);
 
 int about_press(zone_t *, window_t *);
 int subhelp_press(zone_t *, window_t *);
@@ -236,6 +263,42 @@ int shapes_draw(shape_t *, window_t *);
 zone_t *shapeszone_create(window_t *);
 int shapeszone_draw(zone_t *, window_t *);
 
+typedef struct bucket_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} bucket_t;
+
+bucket_t *bucket_create(void);
+int bucket_destroy(bucket_t *);
+int bucket_draw(bucket_t *, window_t *);
+zone_t *bucketzone_create(window_t *);
+int bucketzone_draw(zone_t *, window_t *);
+
+static __attribute_used__ char const *funny_text[] = {
+   "Oh le segfault la, Tom Carlier - 2024",
+    "Qu'est-ce qui est jaune et qui attend ?   Jonathan.",
+    "Alors vous en pensez quoi de ce paint ?",
+    "La creativite est contagieuse, faites-la circuler.",
+    "Mon niveau de sarcasme depend\n"
+    "directement de votre niveau de stupidite.",
+    "Le saviez-vous ? Les abeilles dorment parfois dans des fleurs.",
+    "Le saviez-vous ? L'hippopotomonstrosesquippedaliophobie\n"
+    "est la peur des mots longs.",
+    "Le saviez-vous ? Les carottes n'etaient pas toujours\n"
+    " orange, mais violettes.",
+    "Le saviez-vous ? Le cerveau humain a plus de\n"
+    " connexions que les etoiles dans la galaxie.",
+    NULL
+};
+
+
+typedef struct color_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} color_t;
+
 typedef struct sidemenu_s {
     bool is_clicked;
     sfRectangleShape *rect;
@@ -275,3 +338,24 @@ typedef struct caca_s {
 caca_t *caca_create(char const *, sfVector2f);
 int caca_draw(zone_t *, window_t *);
 int caca_hover(zone_t *, window_t *);
+
+color_t *color_create(void);
+int color_destroy(color_t *);
+int color_draw(color_t *, window_t *);
+int color_press(color_t *, window_t *);
+int colorzone_press(zone_t *, window_t *);
+int colorzone_draw(zone_t *, window_t *);
+zone_t *colorzone_create(window_t *);
+
+typedef struct text_s {
+    sfText *txt;
+} text_t;
+
+text_t *text_create(void);
+int text_destroy(text_t *);
+int text_draw(text_t *, window_t *);
+int text_press(text_t *, window_t *);
+zone_t *textzone_create(zone_t *);
+int textzone_draw(zone_t *, window_t *);
+int textzone_press(zone_t *, window_t *);
+char const *text_get_new_text(void);

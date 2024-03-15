@@ -15,9 +15,10 @@ zone_t *open_create(zone_t *depend)
     file->size.x = 100;
     file->size.y = 50;
     file->extra_information = salad_create("open");
-    file->depend_corner = UPPER_RIGHT;
+    file->depend_corner = LOWER_LEFT;
     file->depend_on = depend;
     file->name = my_strdup("open");
     file->draw_f = salad_draw;
+    file->hover_f = salad_hover;
     return file;
 }

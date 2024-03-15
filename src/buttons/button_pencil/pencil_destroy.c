@@ -10,6 +10,7 @@
 int pencil_destroy(pencil_t *pencil)
 {
     sfRectangleShape_destroy(pencil->rect);
+    sfTexture_destroy((void *)sfSprite_getTexture(pencil->sprite));
     sfSprite_destroy(pencil->sprite);
     free(pencil);
     return 0;
