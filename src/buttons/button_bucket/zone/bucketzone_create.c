@@ -21,5 +21,6 @@ zone_t *bucketzone_create(window_t *window)
     zone->size.x = 40;
     zone->size.y = 40;
     zone->adjust = (sfVector2f){20, 0};
+    zone->free_f = bucket_destroy;
     return zone;
 }
