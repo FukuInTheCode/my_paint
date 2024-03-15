@@ -262,4 +262,4 @@ side_t *side_create(void);
 int side_draw(side_t *, window_t *);
 zone_t *sidezone_create(window_t *);
 int sidezone_draw(zone_t *, window_t *);
-zone_t *plus_create();
+zone_t *plus_create(void);
