@@ -23,5 +23,7 @@ int init_struct_window(window_t *window)
     zone_add(&window->head, shapeszone_create(window));
     zone_add(&window->head, bucketzone_create(window));
     zone_add(&window->head, colorzone_create(window));
+    zone_add(&window->head, textzone_create(zone_get(
+        window->head, "button_color")));
     return 0;
 }
