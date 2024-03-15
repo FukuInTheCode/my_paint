@@ -307,3 +307,13 @@ int color_press(color_t *, window_t *);
 int colorzone_draw(zone_t *, window_t *);
 int colorzone_press(zone_t *, window_t *);
 zone_t *colorzone_create(window_t *);
+
+typedef struct text_s {
+    sfText *txt;
+} text_t;
+
+text_t *text_create(void);
+int text_destroy(text_t *);
+int text_draw(text_t *, window_t *);
+zone_t *textzone_create(zone_t *);
+int textzone_draw(zone_t *, window_t *);
