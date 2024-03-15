@@ -303,6 +303,8 @@ static __attribute_used__ char const *funny_text[] = {
     "10k l'annee pour pas avoir de place",
     "Coucou l'AER",
     "tu peux nous mettre une bonne note ?",
+    "bientot un deuxieme main sur le paint, "
+    "mon mate ne le sait pas",
     NULL
 };
 
