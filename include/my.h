@@ -198,6 +198,7 @@ zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
 zone_t *new_file_create(zone_t *);
+int new_press(zone_t *, window_t *);
 int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
 int quit_press(zone_t *, window_t *);
