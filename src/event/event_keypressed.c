@@ -11,6 +11,6 @@
 int event_keypressed(window_t *window, sfEvent *event)
 {
     if (event->key.code == sfKeyEscape)
-        sfRenderWindow_close(window->window);
+        event_close(window, event);
     return 0;
 }
