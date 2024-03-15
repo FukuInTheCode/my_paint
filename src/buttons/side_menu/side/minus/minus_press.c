@@ -12,7 +12,7 @@ int minus_press(zone_t *zone, window_t *window)
     zone_t *z = zone_get(window->head, "canva");
     canva_t *canva = z->extra_information;
 
-    if (canva->radius >= 1)
+    if (canva->radius > 1)
         canva->radius--;
     return 0;
 }
