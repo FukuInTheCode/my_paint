@@ -20,5 +20,6 @@ zone_t *edit_create(zone_t *burgerzone)
     file->name = my_strdup("edit");
     file->draw_f = salad_draw;
     file->press_f = edit_press;
+    file->hover_f = salad_hover;
     return file;
 }

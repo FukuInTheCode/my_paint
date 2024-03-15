@@ -9,13 +9,14 @@
 
 static int create_other(burger_t *burger)
 {
-    burger->open = open_create(burger->file);
+    burger->new_file = new_file_create(burger->file);
+    burger->open = open_create(burger->new_file);
     burger->save = save_create(burger->open);
-    burger->quit = quit_create(burger->save);
     burger->pencil = pencil_create_salad(burger->edit);
     burger->eraser = eraser_create_salad(burger->pencil);
     burger->subhelp = subhelp_create(burger->help);
     burger->about = about_create(burger->subhelp);
+    burger->quit = quit_create(burger->about);
     return 0;
 }
 
@@ -39,5 +40,6 @@ zone_t *burgerzone_create(void)
     create_other(burger);
     zone->size.x = 100;
     zone->size.y = 100;
+    zone->adjust = (sfVector2f){10, 10};
     return zone;
 }

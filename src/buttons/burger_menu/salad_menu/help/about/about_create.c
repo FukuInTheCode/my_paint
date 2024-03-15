@@ -20,5 +20,6 @@ zone_t *about_create(zone_t *depend)
     file->name = my_strdup("about");
     file->draw_f = salad_draw;
     file->press_f = about_press;
+    file->hover_f = salad_hover;
     return file;
 }
