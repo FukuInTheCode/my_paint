@@ -12,16 +12,15 @@ zone_t *minus_create(zone_t *depend_on)
     zone_t *plus = zone_create();
 
     plus->priority = 2;
-    plus->size.x = 50;
-    plus->size.y = 50;
     plus->extra_information = caca_create("src/assets/minus.jpeg",
         (sfVector2f){8e-2, 8e-2});
+    plus->size = (sfVector2f){80, 50};
     plus->depend_corner = LOWER_LEFT;
     plus->depend_on = depend_on;
     plus->name = my_strdup("minus");
     plus->draw_f = caca_draw;
-    plus->adjust = (sfVector2f){0, 50};
+    plus->adjust = (sfVector2f){7, -60};
     plus->press_f = minus_press;
-    // plus->hover_f = salad_hover;
+    plus->hover_f = caca_hover;
     return plus;
 }
