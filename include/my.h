@@ -69,6 +69,9 @@ typedef struct layer_s {
 typedef struct canva_s {
     layer_t *main;
     layer_t *layers;
+    draw_window_func use_f;
+    sfColor color;
+    int radius;
 } canva_t;
 
 typedef struct window_s {
@@ -125,6 +128,8 @@ static event_t const events[] = {
 layer_t *layer_create(void);
 int layer_add(layer_t **, layer_t *);
 int layer_destroy(layer_t *);
+int layer_use(layer_t *, window_t *, sfVector2f, canva_t *);
+int layer_draw_trail(layer_t *, sfVector2f, window_t *, canva_t *);
 
 canva_t *canva_create(void);
 int canva_destroy(canva_t *);
@@ -133,6 +138,7 @@ int canva_draw(canva_t *, sfRenderWindow *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
+int canvazone_hover(zone_t *, window_t *);
 
 typedef struct burger_s {
     bool is_clicked;
@@ -219,3 +225,28 @@ int delimitator_destroy(delimitator_t *);
 int delimitator_draw(delimitator_t *, window_t *);
 zone_t *delimitatorzone_create(void);
 int delimitatorzone_draw(zone_t *, window_t *);
+
+typedef struct shape_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfCircleShape *circle;
+    sfRectangleShape *rect_inside;
+} shape_t;
+
+shape_t *shapes_create(void);
+int shapes_destroy(shape_t *);
+int shapes_draw(shape_t *, window_t *);
+zone_t *shapeszone_create(window_t *);
+int shapeszone_draw(zone_t *, window_t *);
+
+typedef struct bucket_s {
+    bool is_clicked;
+    sfRectangleShape *rect;
+    sfSprite *sprite;
+} bucket_t;
+
+bucket_t *bucket_create(void);
+int bucket_destroy(bucket_t *);
+int bucket_draw(bucket_t *, window_t *);
+zone_t *bucketzone_create(window_t *);
+int bucketzone_draw(zone_t *, window_t *);

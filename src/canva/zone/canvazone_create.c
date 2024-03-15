@@ -19,5 +19,6 @@ zone_t *canvazone_create(void)
     zone->depend_corner = UPPER_LEFT;
     zone->draw_f = canvazone_draw;
     zone->free_f = canva_destroy;
+    zone->hover_f = canvazone_hover;
     return zone;
 }
