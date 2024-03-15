@@ -21,5 +21,6 @@ zone_t *textzone_create(zone_t *depend_on)
     zone->draw_f = textzone_draw;
     zone->size = (sfVector2f){r.width, r.height};
     zone->adjust = (sfVector2f){20, 15};
+    zone->press_f = textzone_press;
     return zone;
 }

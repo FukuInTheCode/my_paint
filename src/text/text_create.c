@@ -20,6 +20,6 @@ text_t *text_create(void)
     sfText_setFont(text->txt, f);
     sfText_setFillColor(text->txt, sfBlack);
     sfText_setCharacterSize(text->txt, 24);
-    sfText_setString(text->txt, "test");
+    sfText_setString(text->txt, text_get_new_text());
     return text;
 }

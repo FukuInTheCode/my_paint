@@ -276,19 +276,19 @@ zone_t *bucketzone_create(window_t *);
 int bucketzone_draw(zone_t *, window_t *);
 
 static __attribute_used__ char const *funny_text[] = {
-   "Oh le segfault là, Tom Carlier - 2024",
-    "Qu'est-ce qui est jaune et qui attend ?\nJonathan.",
+   "Oh le segfault la, Tom Carlier - 2024",
+    "Qu'est-ce qui est jaune et qui attend ?   Jonathan.",
     "Alors vous en pensez quoi de ce paint ?",
-    "La créativité est contagieuse, faites-la circuler.",
-    "Mon niveau de sarcasme dépend"
-    "directement de votre niveau de stupidité.",
+    "La creativite est contagieuse, faites-la circuler.",
+    "Mon niveau de sarcasme depend\n"
+    "directement de votre niveau de stupidite.",
     "Le saviez-vous ? Les abeilles dorment parfois dans des fleurs.",
-    "Le saviez-vous ? L'hippopotomonstrosesquippedaliophobie "
+    "Le saviez-vous ? L'hippopotomonstrosesquippedaliophobie\n"
     "est la peur des mots longs.",
-    "Le saviez-vous ? Les carottes n'étaient pas toujours"
+    "Le saviez-vous ? Les carottes n'etaient pas toujours\n"
     " orange, mais violettes.",
-    "Le saviez-vous ? Le cerveau humain a plus de"
-    " connexions que les étoiles dans la galaxie.",
+    "Le saviez-vous ? Le cerveau humain a plus de\n"
+    " connexions que les etoiles dans la galaxie.",
     NULL
 };
 
@@ -304,7 +304,6 @@ color_t *color_create(void);
 int color_destroy(color_t *);
 int color_draw(color_t *, window_t *);
 int color_press(color_t *, window_t *);
-int colorzone_draw(zone_t *, window_t *);
 int colorzone_press(zone_t *, window_t *);
 zone_t *colorzone_create(window_t *);
 
@@ -315,5 +314,8 @@ typedef struct text_s {
 text_t *text_create(void);
 int text_destroy(text_t *);
 int text_draw(text_t *, window_t *);
+int text_press(text_t *, window_t *);
 zone_t *textzone_create(zone_t *);
 int textzone_draw(zone_t *, window_t *);
+int textzone_press(zone_t *, window_t *);
+char const *text_get_new_text(void);
