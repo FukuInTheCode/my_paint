@@ -21,5 +21,6 @@ zone_t *sidezone_create(zone_t *depend_on)
     zone->size = (sfVector2f){100, 200};
     zone->adjust = (sfVector2f){0, -50};
     zone->press_f = sidezone_press;
+    zone->free_f = side_destroy;
     return zone;
 }

@@ -22,6 +22,7 @@ zone_t *sidemenuzone_create(window_t *window)
     sidemenu->side = sidezone_create(zone);
     sidemenu->plus = plus_create(sidemenu->side);
     sidemenu->moins = minus_create(sidemenu->side);
+    zone->free_f = sidemenu_destroy;
     zone->size.x = 50;
     zone->size.y = 100;
     zone->adjust = (sfVector2f){-10, 400};

@@ -10,6 +10,7 @@
 int bucket_destroy(bucket_t *bucket)
 {
     sfRectangleShape_destroy(bucket->rect);
+    sfTexture_destroy((void *)sfSprite_getTexture(bucket->sprite));
     sfSprite_destroy(bucket->sprite);
     free(bucket);
     return 0;

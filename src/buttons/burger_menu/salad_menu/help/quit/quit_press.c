@@ -20,6 +20,9 @@ int quit_press(zone_t *zone, window_t *window)
     zone_remove(&window->head, "open");
     zone_remove(&window->head, "eraser");
     zone_remove(&window->head, "pencil");
+    zone_remove(&window->head, "side");
+    zone_remove(&window->head, "plus");
+    zone_remove(&window->head, "minus");
     sfRenderWindow_close(window->window);
     return 0;
 }

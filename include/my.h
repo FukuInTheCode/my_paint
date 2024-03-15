@@ -312,7 +312,6 @@ typedef struct sidemenu_s {
     zone_t *side;
     zone_t *plus;
     zone_t *moins;
-    zone_t *see_color;
 } sidemenu_t;
 
 sidemenu_t *sidemenu_create(void);
@@ -337,6 +336,7 @@ zone_t *plus_create(zone_t *);
 zone_t *minus_create(zone_t *);
 int minus_press(zone_t *, window_t *);
 int plus_press(zone_t *, window_t *);
+int side_destroy(side_t *);
 
 typedef struct caca_s {
     sfSprite *sprite;
@@ -345,6 +345,7 @@ typedef struct caca_s {
 caca_t *caca_create(char const *, sfVector2f);
 int caca_draw(zone_t *, window_t *);
 int caca_hover(zone_t *, window_t *);
+int caca_destroy(caca_t *);
 
 color_t *color_create(void);
 int color_destroy(color_t *);

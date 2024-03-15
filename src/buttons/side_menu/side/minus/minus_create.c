@@ -22,5 +22,6 @@ zone_t *minus_create(zone_t *depend_on)
     plus->adjust = (sfVector2f){7, -60};
     plus->press_f = minus_press;
     plus->hover_f = caca_hover;
+    plus->free_f = caca_destroy;
     return plus;
 }

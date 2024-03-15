@@ -19,5 +19,6 @@ zone_t *delimitatorzone_create(void)
     zone->priority = 1;
     zone->draw_f = delimitatorzone_draw;
     zone->size = (sfVector2f) {1930, 120};
+    zone->free_f = delimitator_destroy;
     return zone;
 }

@@ -19,6 +19,7 @@ static int free_zones(burger_t *bur)
     zone_destroy(bur->quit);
     zone_destroy(bur->pencil);
     zone_destroy(bur->eraser);
+    zone_destroy(bur->new_file);
     return 0;
 }
 
@@ -34,6 +35,7 @@ int burger_destroy(burger_t *burger)
     salad_free(burger->about);
     salad_free(burger->eraser);
     salad_free(burger->pencil);
+    salad_free(burger->new_file);
     free_zones(burger);
     sfRectangleShape_destroy(burger->rect);
     free(burger);
