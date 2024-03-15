@@ -20,5 +20,6 @@ zone_t *help_create(zone_t *edit)
     file->name = my_strdup("help");
     file->draw_f = salad_draw;
     file->press_f = help_press;
+    file->hover_f = salad_hover;
     return file;
 }

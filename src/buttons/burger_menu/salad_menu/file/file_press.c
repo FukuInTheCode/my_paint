@@ -10,23 +10,25 @@
 
 int file_press(zone_t *zone, window_t *window)
 {
-    static bool file_is_pressed = false;
     burger_t *burger = zone_get(window->head, "burger")->extra_information;
 
     zone_remove(&window->head, "subhelp");
     zone_remove(&window->head, "about");
     zone_remove(&window->head, "pencil");
     zone_remove(&window->head, "eraser");
-    if (!file_is_pressed) {
+    zone_remove(&window->head, "quit");
+    if (!burger->is_file) {
         zone_add(&window->head, burger->open);
+        burger->is_help = false;
         zone_add(&window->head, burger->save);
-        zone_add(&window->head, burger->quit);
-        file_is_pressed = true;
+        zone_add(&window->head, burger->new_file);
+        burger->is_edit = false;
+        burger->is_file = true;
     } else {
         zone_remove(&window->head, "open");
         zone_remove(&window->head, "save");
-        zone_remove(&window->head, "quit");
-        file_is_pressed = false;
+        zone_remove(&window->head, "new");
+        burger->is_file = false;
     }
     return 0;
 }

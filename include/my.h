@@ -34,6 +34,7 @@
 typedef int(*draw_window_func)();
 typedef int(*press_window_func)();
 typedef int(*hover_window_func)();
+typedef int(*free_window_func)();
 
 typedef enum corner_u {
     UPPER_LEFT,
@@ -52,6 +53,7 @@ typedef struct zone_s {
     draw_window_func draw_f;
     press_window_func press_f;
     hover_window_func hover_f;
+    free_window_func free_f;
     void *extra_information;
     struct zone_s *next;
     struct zone_s *prev;
@@ -146,6 +148,7 @@ int canva_setcolor(canva_t *, sfColor);
 float canva_getsize(canva_t *);
 int canva_setsize(canva_t *, float);
 int canva_setmode(canva_t *, canva_mode_t);
+int canva_save(canva_t *);
 
 zone_t *canvazone_create(void);
 int canvazone_draw(zone_t *, window_t *);
@@ -164,6 +167,9 @@ typedef struct burger_s {
     zone_t *eraser;
     zone_t *about;
     zone_t *subhelp;
+    bool is_file;
+    bool is_edit;
+    bool is_help;
 } burger_t;
 
 burger_t *burger_create(void);
@@ -187,7 +193,9 @@ zone_t *edit_create(zone_t *);
 zone_t *help_create(zone_t *);
 zone_t *open_create(zone_t *);
 zone_t *save_create(zone_t *);
+int save_press(zone_t *, window_t *);
 zone_t *quit_create(zone_t *);
+int quit_press(zone_t *, window_t *);
 zone_t *about_create(zone_t *);
 zone_t *subhelp_create(zone_t *);
 zone_t *pencil_create_salad(zone_t *);
@@ -198,6 +206,7 @@ int file_press(zone_t *, window_t *);
 int edit_press(zone_t *, window_t *);
 int help_press(zone_t *, window_t *);
 int salad_draw(zone_t *, window_t *);
+int salad_free(zone_t *);
 
 int about_press(zone_t *, window_t *);
 int subhelp_press(zone_t *, window_t *);
